@@ -2,17 +2,50 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Pandemic Globe</title>
+    <title>AWS Global Infrastructure</title>
     <style>
       body {
         margin: 0;
       }
       canvas {
         display: block;
+        position: absolute;
+        top: 0;
+      }
+      header {
+        background-color: #232F3E;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        box-shadow: 0px 0px 4px 0px black;
+      }
+      small {
+        padding: 0 2rem 0 2rem;
+        font-family: "Helvetica";
+      }
+      h1 {
+        font-size: large;
+        font-family: "Helvetica";
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 1rem;
+        color:  #f1f3f3;
       }
     </style>
   </head>
   <body>
+    <header>
+      <h1>AWS Global Infrastructure</h1>
+      <small>
+        <p style="color:  #f1f3f3;"> Available Regions </p>
+        <p style="color:  #ff6633;"> Coming Soon </p>
+      </small>
+    </header>
+    
+
     <script src="./main.js"></script>
   </body>
 </html>
