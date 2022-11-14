@@ -1,277 +1,277 @@
 {
-    "type": "RegionsCollection",
-    "regions": [
-        {
-            "name": "af-south-1",
-            "longName": "Cape Town",
-            "type": "GA",
-            "size": 1.0,
-            "lat": "-33.924870",
-            "lng": "18.424055"
-        },
-        {
-            "name": "ap-east-1",
-            "longName": "Hong Kong",
-            "type": "GA",
-            "size": 1.0,
-            "lat": "22.396427",
-            "lng": "114.109497"
-        },
-        {
-            "name": "ap-northeast-1",
-            "longName": "Tokyo",
-            "type": "GA",
-            "size": 1.0,
-            "lat": "35.689487",
-            "lng": "139.691711"
-        },
-        {
-            "name": "ap-northeast-2",
-            "longName": "Seoul",
-            "type": "GA",
-            "size": 1.0,
-            "lat": "37.566536",
-            "lng": "126.977966"
-        },
-        {
-            "name": "ap-northeast-3",
-            "longName": "Osaka",
-            "type": "GA",
-            "size": 1.0,
-            "lat": "34.693737",
-            "lng": "135.502167"
-        },
-        {
-            "name": "ap-south-1",
-            "longName": "Mumbai",
-            "type": "GA",
-            "size": 1.0,
-            "lat": "19.075983",
-            "lng": "72.877655"
-        },
-        {
-            "name": "ap-southeast-1",
-            "longName": "Singapore",
-            "type": "GA",
-            "size": 1.0,
-            "lat": "1.352083",
-            "lng": "103.819839"
-        },
-        {
-            "name": "ap-southeast-2",
-            "longName": "Sydney",
-            "type": "GA",
-            "size": 1.0,
-            "lat": "-33.868820",
-            "lng": "151.209290"
-        },
-        {
-            "name": "ap-southeast-3",
-            "longName": "Jakarta",
-            "type": "GA",
-            "size": 1.0,
-            "lat": "-6.175110",
-            "lng": "106.865036"
-        },
-        {
-            "name": "ca-central-1",
-            "longName": "Montreal",
-            "type": "GA",
-            "size": 1.0,
-            "lat": "45.501690",
-            "lng": "-73.567253"
-        },
-        {
-            "name": "eu-central-1",
-            "longName": "Frankfurt",
-            "type": "GA",
-            "size": 1.0,
-            "lat": "50.110924",
-            "lng": "8.682127"
-        },
-        {
-            "name": "eu-north-1",
-            "longName": "Stockholm",
-            "type": "GA",
-            "size": 1.0,
-            "lat": "59.329323",
-            "lng": "18.068581"
-        },
-        {
-            "name": "eu-south-1",
-            "longName": "Milan",
-            "type": "GA",
-            "size": 1.0,
-            "lat": "45.064203",
-            "lng": "9.189982"
-        },
-        {
-            "name": "eu-west-1",
-            "longName": "Ireland",
-            "type": "GA",
-            "size": 1.0,
-            "lat": "53.412910",
-            "lng": "-8.243890"
-        },
-        {
-            "name": "eu-west-2",
-            "longName": "London",
-            "type": "GA",
-            "size": 1.0,
-            "lat": "51.607351",
-            "lng": "-0.127758"
-        },
-        {
-            "name": "eu-west-3",
-            "longName": "Paris",
-            "type": "GA",
-            "size": 1.0,
-            "lat": "48.456613",
-            "lng": "2.352222"
-        },
-        {
-            "name": "me-south-1",
-            "longName": "Bahrain",
-            "type": "GA",
-            "size": 1.0,
-            "lat": "26.232691",
-            "lng": "50.578110"
-        },
-        {
-            "name": "sa-east-1",
-            "longName": "Sao Paulo",
-            "type": "GA",
-            "size": 1.0,
-            "lat": "-23.550520",
-            "lng": "-46.633308"
-        },
-        {
-            "name": "us-east-1",
-            "longName": "N. Virginia",
-            "type": "GA",
-            "size": 1.0,
-            "lat": "37.442280",
-            "lng": "-76.420822"
-        },
-        {
-            "name": "us-east-2",
-            "longName": "Ohio",
-            "type": "GA",
-            "size": 1.0,
-            "lat": "40.417286",
-            "lng": "-82.907120"
-        },
-        {
-            "name": "us-west-1",
-            "longName": "N. California",
-            "type": "GA",
-            "size": 1.0,
-            "lat": "38.837521",
-            "lng": "-120.895821"
-        },
-        {
-            "name": "us-west-2",
-            "longName": "Oregon",
-            "type": "GA",
-            "size": 1.0,
-            "lat": "43.804134",
-            "lng": "-120.554199"
-        },
-        {
-            "name": "cn-north-1",
-            "longName": "Beijing",
-            "type": "GA",
-            "size": 1.0,
-            "lat": "39.904202",
-            "lng": "116.407394"
-        },
-        {
-            "name": "cn-northwest-1",
-            "longName": "Ningxia",
-            "type": "GA",
-            "size": 1.0,
-            "lat": "37.330509",
-            "lng": "105.977203"
-        },
-        {
-            "name": "us-gov-east-1",
-            "longName": "GovCloud East",
-            "type": "GA",
-            "size": 1.0,
-            "lat": "35.0",
-            "lng": "-84.091852"
-        },
-        {
-            "name": "us-gov-west-1",
-            "longName": "GovCloud West",
-            "type": "GA",
-            "size": 1.0,
-            "lat": "41.212441",
-            "lng": "-115.790710"
-        },
-        {
-            "name": "Hyderabad",
-            "longName": "Hyderabad",
-            "type": "Announced",
-            "size": 1.0,
-            "lat": "17.385044",
-            "lng": "78.486671"
-        },
-        {
-            "name": "Melbourne",
-            "longName": "Melbourne",
-            "type": "Announced",
-            "size": 1.0,
-            "lat": "-37.813629",
-            "lng": "144.963058"
-        },
-        {
-            "name": "Zurich",
-            "longName": "Zurich",
-            "type": "Announced",
-            "size": 1.0,
-            "lat": "47.006888",
-            "lng": "8.541694"
-        },
-        {
-            "name": "Spain",
-            "longName": "Spain",
-            "type": "Announced",
-            "size": 1.0,
-            "lat": "41.648823",
-            "lng": "-0.889085"
-        },
-        {
-            "name": "Tel Aviv",
-            "longName": "Tel Aviv",
-            "type": "Announced",
-            "size": 1.0,
-            "lat": "32.085300",
-            "lng": "34.781769"
-        },
-        {
-            "name": "UAE",
-            "longName": "UAE",
-            "type": "Announced",
-            "size": 1.0,
-            "lat": "23.424076",
-            "lng": "53.847816"
-        },
-        {
-            "name": "Auckland",
-            "longName": "Auckland",
-            "type": "Announced",
-            "size": 1.0,
-            "lat": "-36.848461",
-            "lng": "174.763336"
-        },
-        {
-            "name": "Calgary",
-            "longName": "Calgary",
-            "type": "Announced",
-            "size": 1.0,
-            "lat": "51.048615",
-            "lng": "-114.070847"
-        }    
-    ]
+  "type": "RegionsCollection",
+  "regions": [
+    {
+      "name": "af-south-1",
+      "longName": "Cape Town",
+      "type": "GA",
+      "size": 1.0,
+      "lat": "-33.924870",
+      "lng": "18.424055"
+    },
+    {
+      "name": "ap-east-1",
+      "longName": "Hong Kong",
+      "type": "GA",
+      "size": 1.0,
+      "lat": "22.396427",
+      "lng": "114.109497"
+    },
+    {
+      "name": "ap-northeast-1",
+      "longName": "Tokyo",
+      "type": "GA",
+      "size": 1.0,
+      "lat": "35.689487",
+      "lng": "139.691711"
+    },
+    {
+      "name": "ap-northeast-2",
+      "longName": "Seoul",
+      "type": "GA",
+      "size": 1.0,
+      "lat": "37.566536",
+      "lng": "126.977966"
+    },
+    {
+      "name": "ap-northeast-3",
+      "longName": "Osaka",
+      "type": "GA",
+      "size": 1.0,
+      "lat": "34.693737",
+      "lng": "135.502167"
+    },
+    {
+      "name": "ap-south-1",
+      "longName": "Mumbai",
+      "type": "GA",
+      "size": 1.0,
+      "lat": "19.075983",
+      "lng": "72.877655"
+    },
+    {
+      "name": "ap-southeast-1",
+      "longName": "Singapore",
+      "type": "GA",
+      "size": 1.0,
+      "lat": "1.352083",
+      "lng": "103.819839"
+    },
+    {
+      "name": "ap-southeast-2",
+      "longName": "Sydney",
+      "type": "GA",
+      "size": 1.0,
+      "lat": "-33.868820",
+      "lng": "151.209290"
+    },
+    {
+      "name": "ap-southeast-3",
+      "longName": "Jakarta",
+      "type": "GA",
+      "size": 1.0,
+      "lat": "-6.175110",
+      "lng": "106.865036"
+    },
+    {
+      "name": "ca-central-1",
+      "longName": "Montreal",
+      "type": "GA",
+      "size": 1.0,
+      "lat": "45.501690",
+      "lng": "-73.567253"
+    },
+    {
+      "name": "eu-central-1",
+      "longName": "Frankfurt",
+      "type": "GA",
+      "size": 1.0,
+      "lat": "50.110924",
+      "lng": "8.682127"
+    },
+    {
+      "name": "eu-north-1",
+      "longName": "Stockholm",
+      "type": "GA",
+      "size": 1.0,
+      "lat": "59.329323",
+      "lng": "18.068581"
+    },
+    {
+      "name": "eu-south-1",
+      "longName": "Milan",
+      "type": "GA",
+      "size": 1.0,
+      "lat": "45.064203",
+      "lng": "9.189982"
+    },
+    {
+      "name": "eu-west-1",
+      "longName": "Ireland",
+      "type": "GA",
+      "size": 1.0,
+      "lat": "53.412910",
+      "lng": "-8.243890"
+    },
+    {
+      "name": "eu-west-2",
+      "longName": "London",
+      "type": "GA",
+      "size": 1.0,
+      "lat": "51.607351",
+      "lng": "-0.127758"
+    },
+    {
+      "name": "eu-west-3",
+      "longName": "Paris",
+      "type": "GA",
+      "size": 1.0,
+      "lat": "48.456613",
+      "lng": "2.352222"
+    },
+    {
+      "name": "me-south-1",
+      "longName": "Bahrain",
+      "type": "GA",
+      "size": 1.0,
+      "lat": "26.232691",
+      "lng": "50.578110"
+    },
+    {
+      "name": "sa-east-1",
+      "longName": "Sao Paulo",
+      "type": "GA",
+      "size": 1.0,
+      "lat": "-23.550520",
+      "lng": "-46.633308"
+    },
+    {
+      "name": "us-east-1",
+      "longName": "N. Virginia",
+      "type": "GA",
+      "size": 1.0,
+      "lat": "37.442280",
+      "lng": "-76.420822"
+    },
+    {
+      "name": "us-east-2",
+      "longName": "Ohio",
+      "type": "GA",
+      "size": 1.0,
+      "lat": "40.417286",
+      "lng": "-82.907120"
+    },
+    {
+      "name": "us-west-1",
+      "longName": "N. California",
+      "type": "GA",
+      "size": 1.0,
+      "lat": "38.837521",
+      "lng": "-120.895821"
+    },
+    {
+      "name": "us-west-2",
+      "longName": "Oregon",
+      "type": "GA",
+      "size": 1.0,
+      "lat": "43.804134",
+      "lng": "-120.554199"
+    },
+    {
+      "name": "cn-north-1",
+      "longName": "Beijing",
+      "type": "GA",
+      "size": 1.0,
+      "lat": "39.904202",
+      "lng": "116.407394"
+    },
+    {
+      "name": "cn-northwest-1",
+      "longName": "Ningxia",
+      "type": "GA",
+      "size": 1.0,
+      "lat": "37.330509",
+      "lng": "105.977203"
+    },
+    {
+      "name": "us-gov-east-1",
+      "longName": "GovCloud East",
+      "type": "GA",
+      "size": 1.0,
+      "lat": "35.0",
+      "lng": "-84.091852"
+    },
+    {
+      "name": "us-gov-west-1",
+      "longName": "GovCloud West",
+      "type": "GA",
+      "size": 1.0,
+      "lat": "41.212441",
+      "lng": "-115.790710"
+    },
+    {
+      "name": "Hyderabad",
+      "longName": "Hyderabad",
+      "type": "Announced",
+      "size": 1.0,
+      "lat": "17.385044",
+      "lng": "78.486671"
+    },
+    {
+      "name": "Melbourne",
+      "longName": "Melbourne",
+      "type": "Announced",
+      "size": 1.0,
+      "lat": "-37.813629",
+      "lng": "144.963058"
+    },
+    {
+      "name": "eu-central-2",
+      "longName": "Zurich",
+      "type": "GA",
+      "size": 1.0,
+      "lat": "47.006888",
+      "lng": "8.541694"
+    },
+    {
+      "name": "Spain",
+      "longName": "Spain",
+      "type": "Announced",
+      "size": 1.0,
+      "lat": "41.648823",
+      "lng": "-0.889085"
+    },
+    {
+      "name": "Tel Aviv",
+      "longName": "Tel Aviv",
+      "type": "Announced",
+      "size": 1.0,
+      "lat": "32.085300",
+      "lng": "34.781769"
+    },
+    {
+      "name": "UAE",
+      "longName": "UAE",
+      "type": "Announced",
+      "size": 1.0,
+      "lat": "23.424076",
+      "lng": "53.847816"
+    },
+    {
+      "name": "Auckland",
+      "longName": "Auckland",
+      "type": "Announced",
+      "size": 1.0,
+      "lat": "-36.848461",
+      "lng": "174.763336"
+    },
+    {
+      "name": "Calgary",
+      "longName": "Calgary",
+      "type": "Announced",
+      "size": 1.0,
+      "lat": "51.048615",
+      "lng": "-114.070847"
+    }
+  ]
 }
