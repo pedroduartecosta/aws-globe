@@ -83,6 +83,7 @@
       /* Style for the checkbox */
       .checkbox-input {
         margin-right: 10px;
+        margin: 0px;
         appearance: none;
         width: 20px;
         height: 20px;
@@ -105,6 +106,11 @@
         font-family: "Helvetica";
       }
 
+      .checkbox-label {
+        display: inline-flex;
+        align-items: center;
+      }
+
       @media (max-width: 600px) {
         body {
           font-size: 1em;
@@ -118,6 +124,8 @@
         .checkbox-label {
           margin: 10px 0; /* Increased spacing */
           align-self: end;
+          display: inline-flex;
+          align-items: center;
         }
 
         select {
@@ -142,6 +150,7 @@
         footer {
           flex-direction: column;
           text-align: right;
+          width: min-content;
         }
       }
     </style>
@@ -171,19 +180,20 @@
           </select>
         </div>
 
-        <p style="color: #f1f3f3">Regions</p>
-        <div id="localZonesToggle" class="label-container checkbox-label">
+        <div id="localZonesToggle" class="checkbox-label">
+          <p style="color: #ffee53; margin: 5px">Local Zones</p>
           <input
             type="checkbox"
             id="localZonesCheckbox"
             class="checkbox-input"
           />
-          <p style="color: #ffee53">Local Zones</p>
         </div>
-        <div id="localZonesToggle" class="label-container checkbox-label">
+        <br />
+        <div id="localZonesToggle" class="checkbox-label">
+          <p style="color: #337aff; margin: 5px">PoPs</p>
           <input type="checkbox" id="popCheckbox" class="checkbox-input" />
-          <p style="color: #337aff">PoPs</p>
         </div>
+        <p style="color: #f1f3f3; margin-top: 5px">Regions</p>
         <p style="color: #ff6633">New Announced Regions</p>
       </small>
     </footer>
