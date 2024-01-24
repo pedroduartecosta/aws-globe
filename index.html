@@ -13,7 +13,7 @@
         top: 0;
       }
       header {
-        background-color: #232F3E;
+        background-color: #232f3e;
         position: relative;
         z-index: 1;
         display: flex;
@@ -32,7 +32,7 @@
         margin-top: 0;
         margin-bottom: 0;
         padding: 1rem;
-        color:  #f1f3f3;
+        color: #f1f3f3;
       }
     </style>
   </head>
@@ -40,11 +40,21 @@
     <header>
       <h1>AWS Global Infrastructure</h1>
       <small>
-        <p style="color:  #f1f3f3;"> Available Regions </p>
-        <p style="color:  #ff6633;"> Coming Soon </p>
+        <p style="color: #f1f3f3">Available Regions</p>
+        <p style="color: #ff6633">Coming Soon</p>
       </small>
+
+      <!-- Cloud Provider Toggle -->
+      <div id="cloudProviderToggle">
+        <button id="awsButton">AWS</button>
+        <button id="googleButton">Google</button>
+      </div>
+
+      <!-- Name Display Mode Toggle -->
+      <div id="nameDisplayToggle">
+        <button id="toggleNameDisplay">Toggle Name Display</button>
+      </div>
     </header>
-    
 
     <script src="./main.js"></script>
   </body>

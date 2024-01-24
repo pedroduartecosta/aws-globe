@@ -14,7 +14,8 @@ import {
 } from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import countries from "./files/globe-data-min.json";
-import regionsData from "./files/regions-data.json";
+import awsRegionsData from "./files/regions-data-aws.json";
+import googleRegionsData from "./files/regions-data-google.json";
 import labelfont from "../assets/src/files/helvetiker_bold.typeface.json"
 
 var renderer, camera, scene, controls;
@@ -22,12 +23,13 @@ let mouseX = 0;
 let mouseY = 0;
 let windowHalfX = window.innerWidth / 2;
 let windowHalfY = window.innerHeight / 2;
-var GlobeRegionsLongName;
-var GlobeRegionsName
+var GlobeRegionsAWSLongName, GlobeRegionsAWSName;
+var GlobeRegionsGoogleLongName, GlobeRegionsGoogleName;
+let isLongName = true; // Default display mode
+let selectedProvider = 'AWS'; // Default provider
 
 init();
-GlobeRegionsLongName=initGlobe("longName",true);
-GlobeRegionsName=initGlobe("name",false);
+initGlobes();
 onWindowResize();
 animate();
 
@@ -64,7 +66,7 @@ function init() {
 
   camera.position.z = 300;
   camera.position.x = 0;
-  camera.position.y = 0;
+  camera.position.y = 150;
 
   scene.add(camera);
 
@@ -95,14 +97,90 @@ function init() {
 
   window.addEventListener("resize", onWindowResize, false);
   document.addEventListener("mousemove", onMouseMove);
-  document.addEventListener("mousedown", onMouseDown);
-  document.addEventListener("mouseup", onMouseUp);
-  document.addEventListener("touchstart", onMouseDown, false);
-  document.addEventListener("touchend", onMouseUp, false);
+  //document.addEventListener("mousedown", onMouseDown);
+  //document.addEventListener("mouseup", onMouseUp);
+  //document.addEventListener("touchstart", onMouseDown, false);
+  //document.addEventListener("touchend", onMouseUp, false);
+  document.getElementById('cloudProviderSelect').addEventListener('change', (event) => {
+    const selectedOption = event.target.value;
+    loadProviderData(selectedOption);
+  });
+  document.getElementById('nameDisplaySelect').addEventListener('change', (event) => {
+    const isLongName = event.target.value === 'longName';
+    updateNameDisplay(isLongName);
+  });
+
 }
 
+function initGlobes() {
+  // Initialize AWS Globes
+  GlobeRegionsAWSLongName = initGlobe("longName", true, awsRegionsData);
+  GlobeRegionsAWSName = initGlobe("name", false, awsRegionsData);
+
+  // Initialize Google Globes
+  GlobeRegionsGoogleLongName = initGlobe("longName", false, googleRegionsData);
+  GlobeRegionsGoogleName = initGlobe("name", false, googleRegionsData);
+}
+
+function loadProviderData(provider) {
+  console.log("Loading " + provider + " data");
+
+  switch (provider) {
+    case 'aws':
+      scene.remove(GlobeRegionsGoogleLongName);
+      scene.remove(GlobeRegionsGoogleName);
+      scene.add(isLongName ? GlobeRegionsAWSLongName : GlobeRegionsAWSName);
+      selectedProvider = 'AWS';
+      break;
+    case 'google':
+      scene.remove(GlobeRegionsAWSLongName);
+      scene.remove(GlobeRegionsAWSName);
+      scene.add(isLongName ? GlobeRegionsGoogleLongName : GlobeRegionsGoogleName);
+      selectedProvider = 'Google';
+      break;
+    default:
+      console.error('Unknown provider:', provider);
+  }
+}
+
+
+
+function updateNameDisplay(longName) {
+  // Determine which set of globes to show and hide based on the provider
+  var globeToShowLongName, globeToShowName, globeToHideLongName, globeToHideName;
+
+  if (selectedProvider === 'AWS') {
+    globeToShowLongName = GlobeRegionsAWSLongName;
+    globeToShowName = GlobeRegionsAWSName;
+    globeToHideLongName = GlobeRegionsGoogleLongName;
+    globeToHideName = GlobeRegionsGoogleName;
+  } else if (selectedProvider === 'Google') {
+    globeToShowLongName = GlobeRegionsGoogleLongName;
+    globeToShowName = GlobeRegionsGoogleName;
+    globeToHideLongName = GlobeRegionsAWSLongName;
+    globeToHideName = GlobeRegionsAWSName;
+  } else {
+    console.error('Unknown provider:', provider);
+    return;
+  }
+
+  // Hide the globes of the other provider
+  scene.remove(globeToHideLongName);
+  scene.remove(globeToHideName);
+
+  // Show the appropriate globe based on the longName flag
+  if (longName) {
+    scene.add(globeToShowLongName);
+    scene.remove(globeToShowName);
+  } else {
+    scene.add(globeToShowName);
+    scene.remove(globeToShowLongName);
+  }
+}
+
+
 // SECTION Globe
-function initGlobe(labelText, addToScene) {
+function initGlobe(labelText, addToScene, regionsData) {
   // Initialize the Globe
   let Globe = new ThreeGlobe({
     waitForGlobeReady: true,
@@ -134,8 +212,7 @@ function initGlobe(labelText, addToScene) {
       .ringRepeatPeriod(100)
       .labelsData(regionsData.regions)
       .labelColor((e) => {
-        if (e.type == "GA")
-        {
+        if (e.type == "GA") {
           return "#f1f3f3";
         } else return "#ff6633";
       })
@@ -148,8 +225,7 @@ function initGlobe(labelText, addToScene) {
       .labelTypeFace(labelfont)
       .pointsData(regionsData.regions)
       .pointColor((e) => {
-        if (e.type == "GA")
-        {
+        if (e.type == "GA") {
           return "#f1f3f3";
         } else return "#ff6633";
       })
@@ -168,7 +244,7 @@ function initGlobe(labelText, addToScene) {
 
   // NOTE Cool stuff
   // globeMaterial.wireframe = true;
-  if(addToScene){
+  if (addToScene) {
     scene.add(Globe);
   }
 
