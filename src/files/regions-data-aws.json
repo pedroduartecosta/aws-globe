@@ -21,6 +21,15 @@
     },
     {
       "name": "to-be-announced",
+      "longName": "New Zealand",
+      "type": "Region",
+      "status": "unavailable",
+      "size": 1.0,
+      "lat": -42.67868146042933,
+      "lng": 172.06769022607816
+    },
+    {
+      "name": "to-be-announced",
       "longName": "Malaysia",
       "type": "Region",
       "status": "unavailable",
