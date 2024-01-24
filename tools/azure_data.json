@@ -1,0 +1,2192 @@
+{
+    "type": "AzureDataCollection",
+    "regions": [
+        {
+            "name": "southafricanorth",
+            "longName": "Johannesburg",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": -26.204103,
+            "lng": 28.047304
+        },
+        {
+            "name": "eastasia",
+            "longName": "Hong Kong",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 22.396427,
+            "lng": 114.109497
+        },
+        {
+            "name": "southeastasia",
+            "longName": "Singapore",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 1.13,
+            "lng": 105.3
+        },
+        {
+            "name": "australiaeast",
+            "longName": "New South Wales",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": -31.253218,
+            "lng": 146.921097
+        },
+        {
+            "name": "australiasoutheast",
+            "longName": "Victoria",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": -37.8142176,
+            "lng": 144.9631608
+        },
+        {
+            "name": "australiacentral",
+            "longName": "Canberra",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": -35.2975906,
+            "lng": 149.1012676
+        },
+        {
+            "name": "austriaeast",
+            "longName": "Vienna",
+            "type": "Region",
+            "status": "unavailable",
+            "size": 1.0,
+            "lat": 48.599753,
+            "lng": 16.404751
+        },
+        {
+            "name": "belgiumcentral",
+            "longName": "Brussels",
+            "type": "Region",
+            "status": "unavailable",
+            "size": 1.0,
+            "lat": 51.35,
+            "lng": 5.06
+        },
+        {
+            "name": "brazilsouth",
+            "longName": "S\u00e3o Paulo State",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": -23.74512587,
+            "lng": -46.66992188
+        },
+        {
+            "name": "canadacentral",
+            "longName": "Toronto",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 43.6534817,
+            "lng": -79.3839347
+        },
+        {
+            "name": "canadaeast",
+            "longName": "Quebec City",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 46.8259601,
+            "lng": -71.2352226
+        },
+        {
+            "name": "chilecentral",
+            "longName": "Santiago",
+            "type": "Region",
+            "status": "unavailable",
+            "size": 1.0,
+            "lat": -33.47,
+            "lng": -70.8
+        },
+        {
+            "name": "chinaeast",
+            "longName": "Shanghai",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 31.2322758,
+            "lng": 121.9692071
+        },
+        {
+            "name": "chinaeast2",
+            "longName": "Shanghai",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 30.57015912,
+            "lng": 119.9265137
+        },
+        {
+            "name": "chinanorth",
+            "longName": "Beijing",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 40.5065084,
+            "lng": 116.0912391
+        },
+        {
+            "name": "chinanorth2",
+            "longName": "Beijing",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 39.63107677,
+            "lng": 118.3976563
+        },
+        {
+            "name": "chinanorth3",
+            "longName": "Hebei",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 42.710633,
+            "lng": 116.277987
+        },
+        {
+            "name": "denmarkeast",
+            "longName": "Copenhagen",
+            "type": "Region",
+            "status": "unavailable",
+            "size": 1.0,
+            "lat": 55.664858,
+            "lng": 12.580776
+        },
+        {
+            "name": "northeurope",
+            "longName": "Ireland",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 52.865196,
+            "lng": -7.9794599
+        },
+        {
+            "name": "westeurope",
+            "longName": "Netherlands",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 52.5001698,
+            "lng": 7.0480821
+        },
+        {
+            "name": "finlandcentral",
+            "longName": "Helsinki",
+            "type": "Region",
+            "status": "unavailable",
+            "size": 1.0,
+            "lat": 60.183027,
+            "lng": 24.874774
+        },
+        {
+            "name": "francecentral",
+            "longName": "Paris",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 48.8566969,
+            "lng": 2.3514616
+        },
+        {
+            "name": "germanywestcentral",
+            "longName": "Frankfurt",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 50.2106444,
+            "lng": 8.6820917
+        },
+        {
+            "name": "greececentral",
+            "longName": "Athens",
+            "type": "Region",
+            "status": "unavailable",
+            "size": 1.0,
+            "lat": 37.9839412,
+            "lng": 23.7283052
+        },
+        {
+            "name": "centralindia",
+            "longName": "Pune",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 18.521428,
+            "lng": 75.0544541
+        },
+        {
+            "name": "southindia",
+            "longName": "Chennai",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 13.0836939,
+            "lng": 80.270186
+        },
+        {
+            "name": "southcentralindia",
+            "longName": "Hyderabad",
+            "type": "Region",
+            "status": "unavailable",
+            "size": 1.0,
+            "lat": 17.34,
+            "lng": 78.5
+        },
+        {
+            "name": "indonesiacentral",
+            "longName": "Jakarta",
+            "type": "Region",
+            "status": "unavailable",
+            "size": 1.0,
+            "lat": -6.1753942,
+            "lng": 106.827183
+        },
+        {
+            "name": "israelcentral",
+            "longName": "Israel",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 31.5313113,
+            "lng": 35.8667654
+        },
+        {
+            "name": "italynorth",
+            "longName": "Milan",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 45.2668,
+            "lng": 9.6905
+        },
+        {
+            "name": "japaneast",
+            "longName": "Tokyo, Saitama",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 37.6828387,
+            "lng": 139.7594549
+        },
+        {
+            "name": "japanwest",
+            "longName": "Osaka",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 34.6198813,
+            "lng": 135.490357
+        },
+        {
+            "name": "koreacentral",
+            "longName": "Seoul",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 37.5666791,
+            "lng": 126.9782914
+        },
+        {
+            "name": "malaysiawest",
+            "longName": "Kuala Lumpur",
+            "type": "Region",
+            "status": "unavailable",
+            "size": 1.0,
+            "lat": 4.55035,
+            "lng": 101.809256
+        },
+        {
+            "name": "mexicocentral",
+            "longName": "Quer\u00e9taro State",
+            "type": "Region",
+            "status": "unavailable",
+            "size": 1.0,
+            "lat": 20.8542575,
+            "lng": -99.84756
+        },
+        {
+            "name": "newzealandnorth",
+            "longName": "Auckland",
+            "type": "Region",
+            "status": "unavailable",
+            "size": 1.0,
+            "lat": -36.852095,
+            "lng": 174.7631803
+        },
+        {
+            "name": "norwayeast",
+            "longName": "Oslo",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 59.9133301,
+            "lng": 10.7389701
+        },
+        {
+            "name": "polandcentral",
+            "longName": "Warsaw",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 52.2319581,
+            "lng": 21.8067249
+        },
+        {
+            "name": "qatarcentral",
+            "longName": "Doha",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 26.2856329,
+            "lng": 51.5264162
+        },
+        {
+            "name": "saudiarabiacentral",
+            "longName": "Riyadh",
+            "type": "Region",
+            "status": "unavailable",
+            "size": 1.0,
+            "lat": 24.7136,
+            "lng": 46.6753
+        },
+        {
+            "name": "spaincentral",
+            "longName": "Madrid",
+            "type": "Region",
+            "status": "unavailable",
+            "size": 1.0,
+            "lat": 40.4167047,
+            "lng": -3.7035825
+        },
+        {
+            "name": "swedencentral",
+            "longName": "G\u00e4vle and Sandviken",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 60.667761,
+            "lng": 17.138836
+        },
+        {
+            "name": "switzerlandnorth",
+            "longName": "Z\u00fcrich",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 47.2744489,
+            "lng": 8.8410422
+        },
+        {
+            "name": "taiwannorth",
+            "longName": "Taipei",
+            "type": "Region",
+            "status": "unavailable",
+            "size": 1.0,
+            "lat": 25.039666,
+            "lng": 121.4139
+        },
+        {
+            "name": "uaenorth",
+            "longName": "Dubai",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 25.2047397,
+            "lng": 55.2707065
+        },
+        {
+            "name": "uksouth",
+            "longName": "London",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 51.5073219,
+            "lng": -0.1276474
+        },
+        {
+            "name": "ukwest",
+            "longName": "Cardiff",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 51.4816546,
+            "lng": -3.1791934
+        },
+        {
+            "name": "centralus",
+            "longName": "Iowa",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 41.4509614,
+            "lng": -94.55932617
+        },
+        {
+            "name": "eastus",
+            "longName": "Virginia",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 38.75408328,
+            "lng": -78.13476563
+        },
+        {
+            "name": "eastus2",
+            "longName": "Virginia",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 36.66841892,
+            "lng": -81.12304688
+        },
+        {
+            "name": "eastus3",
+            "longName": "Georgia",
+            "type": "Region",
+            "status": "unavailable",
+            "size": 1.0,
+            "lat": 32.840464,
+            "lng": -83.716858
+        },
+        {
+            "name": "northcentralus",
+            "longName": "Illinois",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 40.0796606,
+            "lng": -89.4337288
+        },
+        {
+            "name": "southcentralus",
+            "longName": "Texas",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 29.55434513,
+            "lng": -96.87744141
+        },
+        {
+            "name": "westcentralus",
+            "longName": "Wyoming",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 43.1700264,
+            "lng": -107.568534
+        },
+        {
+            "name": "westus",
+            "longName": "California",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 36.7014631,
+            "lng": -118.755997
+        },
+        {
+            "name": "westus2",
+            "longName": "Washington",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 47.2868352,
+            "lng": -120.212613
+        },
+        {
+            "name": "westus3",
+            "longName": "Arizona",
+            "type": "Region",
+            "status": "available",
+            "size": 1.0,
+            "lat": 34.395342,
+            "lng": -111.763275
+        },
+        {
+            "name": "atlanta",
+            "longName": "Atlanta metro",
+            "type": "Local Zone",
+            "status": "available",
+            "size": 0.5,
+            "lat": 34.394544,
+            "lng": -83.712717
+        },
+        {
+            "name": "dallas",
+            "longName": "Dallas metro",
+            "type": "Local Zone",
+            "status": "available",
+            "size": 0.5,
+            "lat": 32.7,
+            "lng": -96.77
+        },
+        {
+            "name": "MRS20",
+            "longName": "Marseille",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 43.310986,
+            "lng": 5.37401
+        },
+        {
+            "name": "DXB20",
+            "longName": "Dubai",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 24.9184,
+            "lng": 55.0674
+        },
+        {
+            "name": "DXB30",
+            "longName": "Dubai",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 24.91676983,
+            "lng": 55.06704787
+        },
+        {
+            "name": "DBA",
+            "longName": "Dublin",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 53.29176391,
+            "lng": -6.41546504
+        },
+        {
+            "name": "LON32",
+            "longName": "London",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 51.511393,
+            "lng": -0.001802
+        },
+        {
+            "name": "SHA20",
+            "longName": "Shanghai",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 31.322711,
+            "lng": 121.600911
+        },
+        {
+            "name": "SG1",
+            "longName": "Singapore",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 1.33671465,
+            "lng": 103.893905
+        },
+        {
+            "name": "TYO02",
+            "longName": "Tokyo",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 35.6884,
+            "lng": 139.766
+        },
+        {
+            "name": "BY30",
+            "longName": "Santa Clara",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 37.37632407,
+            "lng": -121.9728987
+        },
+        {
+            "name": "PDX31",
+            "longName": "Hillsboro",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 45.5521,
+            "lng": -122.915
+        },
+        {
+            "name": "BL31",
+            "longName": "Reston",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 38.9506,
+            "lng": -77.3645
+        },
+        {
+            "name": "EWR30",
+            "longName": "Newark",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 40.736783,
+            "lng": -74.173883
+        },
+        {
+            "name": "AMS21",
+            "longName": "Haarlemmermeer",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 52.2765,
+            "lng": 4.7429
+        },
+        {
+            "name": "BJS20",
+            "longName": "Beijing",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 39.80926702,
+            "lng": 116.5297126
+        },
+        {
+            "name": "HYD30",
+            "longName": "Hyderabad",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 17.44159,
+            "lng": 78.3779349
+        },
+        {
+            "name": "PER30",
+            "longName": "Malaga",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": -31.864402,
+            "lng": 115.896177
+        },
+        {
+            "name": "HKG30",
+            "longName": "Chai Wan",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 22.266098,
+            "lng": 114.246512
+        },
+        {
+            "name": "BOS31",
+            "longName": "Boston",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 42.35517,
+            "lng": -71.06046
+        },
+        {
+            "name": "AMS31",
+            "longName": "Amsterdam",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 52.356866,
+            "lng": 4.952901
+        },
+        {
+            "name": "LON04",
+            "longName": "Slough",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 51.521983,
+            "lng": -0.629298
+        },
+        {
+            "name": "BOG30",
+            "longName": "Bogota",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 4.67140518,
+            "lng": -74.16190823
+        },
+        {
+            "name": "AKL30",
+            "longName": "Albany",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": -36.75017,
+            "lng": 174.696558
+        },
+        {
+            "name": "FRA31",
+            "longName": "Frankfurt",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 50.0973139,
+            "lng": 8.64390448
+        },
+        {
+            "name": "GVA30",
+            "longName": "Vernier",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 46.207918,
+            "lng": 6.098204
+        },
+        {
+            "name": "SVG20",
+            "longName": "Stravanger",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 59.068504,
+            "lng": 5.758145
+        },
+        {
+            "name": "DUS30",
+            "longName": "Duesseldorf",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 51.188,
+            "lng": 6.866
+        },
+        {
+            "name": "LOS30",
+            "longName": "Lagos",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 6.59771997,
+            "lng": 3.37348672
+        },
+        {
+            "name": "MUC30",
+            "longName": "Munich",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 48.152126,
+            "lng": 11.544467
+        },
+        {
+            "name": "NBO30",
+            "longName": "Nairobi",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": -1.29,
+            "lng": 36.82
+        },
+        {
+            "name": "JKT30",
+            "longName": "Jakarta Selatan",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": -6.238862,
+            "lng": 106.824018
+        },
+        {
+            "name": "SGN30",
+            "longName": "Ho Chi Minh City",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 10.769444,
+            "lng": 106.681944
+        },
+        {
+            "name": "DNA",
+            "longName": "Denver",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 39.745538,
+            "lng": -104.995697
+        },
+        {
+            "name": "OSL30",
+            "longName": "Oslo",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 59.924821,
+            "lng": 10.809047
+        },
+        {
+            "name": "ATL30",
+            "longName": "Atlanta",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 33.7587059,
+            "lng": -84.3879707
+        },
+        {
+            "name": "SIN30",
+            "longName": "Singapore",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 1.296549,
+            "lng": 103.790895
+        },
+        {
+            "name": "OSA31",
+            "longName": "Osaka",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 34.675771,
+            "lng": 135.495625
+        },
+        {
+            "name": "TYO33",
+            "longName": "Koto-Ku",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 35.64779167,
+            "lng": 139.7908333
+        },
+        {
+            "name": "MOW30",
+            "longName": "Moscow",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 55.65271,
+            "lng": 37.528567
+        },
+        {
+            "name": "MWH30",
+            "longName": "Quincy",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 47.246166,
+            "lng": -119.81337
+        },
+        {
+            "name": "BUE30",
+            "longName": "Buenos Aires",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": -34.49086,
+            "lng": -58.55744
+        },
+        {
+            "name": "CAI30",
+            "longName": "6th Of October City",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 30.0683888,
+            "lng": 31.0236111
+        },
+        {
+            "name": "IST30",
+            "longName": "Istanbul",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 40.996151,
+            "lng": 29.171325
+        },
+        {
+            "name": "ROM30",
+            "longName": "Rome",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 41.899003,
+            "lng": 12.512118
+        },
+        {
+            "name": "TLV30",
+            "longName": "Petch Tikva",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 32.089041,
+            "lng": 34.855263
+        },
+        {
+            "name": "MSP30",
+            "longName": "Minneapolis",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 44.97136,
+            "lng": -93.254705
+        },
+        {
+            "name": "PHX31",
+            "longName": "Tempe",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 33.395454,
+            "lng": -112.4699
+        },
+        {
+            "name": "DTT30",
+            "longName": "Southfield",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 42.447734,
+            "lng": -83.262758
+        },
+        {
+            "name": "LAX32",
+            "longName": "Los Angeles",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 34.047336,
+            "lng": -118.257447
+        },
+        {
+            "name": "SEL21",
+            "longName": "Seoul",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 37.5305,
+            "lng": 126.876
+        },
+        {
+            "name": "SAN30",
+            "longName": "San Diego",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 32.841736,
+            "lng": -117.16983
+        },
+        {
+            "name": "LAS30",
+            "longName": "Las Vegas",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 36.06519,
+            "lng": -115.13069
+        },
+        {
+            "name": "BOM31",
+            "longName": "Mumbai",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 19.12666,
+            "lng": 73.00445
+        },
+        {
+            "name": "JGA20",
+            "longName": "Jamnagar",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 22.358728,
+            "lng": 69.849696
+        },
+        {
+            "name": "NAG20",
+            "longName": "Nagpur",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 21.179493,
+            "lng": 79.379175
+        },
+        {
+            "name": "IEV30",
+            "longName": "Kiev",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 50.435709,
+            "lng": 30.50056
+        },
+        {
+            "name": "LED30",
+            "longName": "St Petersburg",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 59.887205,
+            "lng": 30.3292
+        },
+        {
+            "name": "RBA30",
+            "longName": "Rabat",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 33.988303,
+            "lng": -6.722018
+        },
+        {
+            "name": "BNA30",
+            "longName": "Nashville",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 36.144924,
+            "lng": -86.70176
+        },
+        {
+            "name": "JAX30",
+            "longName": "Jacksonville",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 30.254468,
+            "lng": -81.604451
+        },
+        {
+            "name": "LAD50",
+            "longName": "Luanda",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": -8.8171331,
+            "lng": 13.23071314
+        },
+        {
+            "name": "MEL01",
+            "longName": "Port Melbourne",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": -37.822159,
+            "lng": 144.9322
+        },
+        {
+            "name": "SYD03",
+            "longName": "Sydney",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": -33.785169,
+            "lng": 151.131515
+        },
+        {
+            "name": "BNE01",
+            "longName": "Brisbane",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": -27.465491,
+            "lng": 153.02964
+        },
+        {
+            "name": "PER01",
+            "longName": "Perth",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": -31.95551314,
+            "lng": 115.8555542
+        },
+        {
+            "name": "SYD",
+            "longName": "Mascot",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": -33.921388,
+            "lng": 151.18816
+        },
+        {
+            "name": "CBR20",
+            "longName": "Canberra",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": -35.3375,
+            "lng": 149.182
+        },
+        {
+            "name": "CBR21",
+            "longName": "Canberra",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": -35.3886,
+            "lng": 149.168
+        },
+        {
+            "name": "VIE",
+            "longName": "Vienna",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 48.2697621,
+            "lng": 16.41059
+        },
+        {
+            "name": "BAK50",
+            "longName": "Baku",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 40.4167,
+            "lng": 49.9093
+        },
+        {
+            "name": "BRU30",
+            "longName": "Zaventem",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 50.87070926,
+            "lng": 4.47624001
+        },
+        {
+            "name": "RIO02",
+            "longName": "Rio De Janeiro",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": -22.87130221,
+            "lng": -43.27295576
+        },
+        {
+            "name": "RIO03",
+            "longName": "Rio De Janeiro",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": -22.90541185,
+            "lng": -43.21777944
+        },
+        {
+            "name": "CPQ01",
+            "longName": "Campinas",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": -22.848131,
+            "lng": -47.153575
+        },
+        {
+            "name": "GRU",
+            "longName": "S\u00e3o Paulo",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": -23.49378193,
+            "lng": -46.8096319
+        },
+        {
+            "name": "SAO03",
+            "longName": "Tambore",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": -23.50265251,
+            "lng": -46.82712293
+        },
+        {
+            "name": "UDI50",
+            "longName": "Uberl\u00e2ndia",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": -18.91772223,
+            "lng": -48.278878
+        },
+        {
+            "name": "SOF01",
+            "longName": "Sofia",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 42.702735,
+            "lng": 23.306259
+        },
+        {
+            "name": "YMQ01",
+            "longName": "Montreal",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 45.497374,
+            "lng": -73.571138
+        },
+        {
+            "name": "YMQ02",
+            "longName": "Montreal",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 45.497374,
+            "lng": -73.571138
+        },
+        {
+            "name": "YTO01",
+            "longName": "Toronto",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 43.64462742,
+            "lng": -79.3840799
+        },
+        {
+            "name": "YVR01",
+            "longName": "Vancouver",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 49.28702845,
+            "lng": -123.1196396
+        },
+        {
+            "name": "YVR30",
+            "longName": "Vancouver",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 49.284795,
+            "lng": -123.112065
+        },
+        {
+            "name": "SCL30",
+            "longName": "Santiago",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": -33.35818506,
+            "lng": -70.67581544
+        },
+        {
+            "name": "BJ1",
+            "longName": "Beijing",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 39.972792,
+            "lng": 116.489847
+        },
+        {
+            "name": "BJB",
+            "longName": "Beijing",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 40.07721259,
+            "lng": 116.2430087
+        },
+        {
+            "name": "ZAG30",
+            "longName": "Zagreb",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 45.803311,
+            "lng": 15.943893
+        },
+        {
+            "name": "PRG01",
+            "longName": "Prague",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 50.06011694,
+            "lng": 14.48302291
+        },
+        {
+            "name": "CPH30",
+            "longName": "Ballerup",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 55.728092,
+            "lng": 12.377482
+        },
+        {
+            "name": "UIO01",
+            "longName": "Inaquito",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": -0.16896375,
+            "lng": -78.48494408
+        },
+        {
+            "name": "HEL02",
+            "longName": "Helsinki",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 60.185451,
+            "lng": 24.96931124
+        },
+        {
+            "name": "HEL03",
+            "longName": "Helsinki",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 60.22072631,
+            "lng": 24.98389541
+        },
+        {
+            "name": "MRS01",
+            "longName": "Marseille",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 43.361262,
+            "lng": 5.338011
+        },
+        {
+            "name": "PAR02",
+            "longName": "Paris",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 48.85616156,
+            "lng": 2.38392119
+        },
+        {
+            "name": "PRA",
+            "longName": "Saint Denis",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 48.91420565,
+            "lng": 2.36247061
+        },
+        {
+            "name": "MRS02",
+            "longName": "Marseille",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 43.310986,
+            "lng": 5.37401
+        },
+        {
+            "name": "LEJ20",
+            "longName": "Biere",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 51.9851,
+            "lng": 11.6528
+        },
+        {
+            "name": "FRA20",
+            "longName": "Frankfurt",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 50.12064,
+            "lng": 8.737115
+        },
+        {
+            "name": "BER30",
+            "longName": "Berlin",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 52.53847592,
+            "lng": 13.2382196
+        },
+        {
+            "name": "FRA",
+            "longName": "Frankfurt",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 50.1203726,
+            "lng": 8.73697491
+        },
+        {
+            "name": "BER31",
+            "longName": "Berlin",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 52.53847592,
+            "lng": 13.2382196
+        },
+        {
+            "name": "ATH01",
+            "longName": "Koropi",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 37.87110875,
+            "lng": 23.87024752
+        },
+        {
+            "name": "GUM01",
+            "longName": "Piti",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 13.41571432,
+            "lng": 144.6878882
+        },
+        {
+            "name": "HKB",
+            "longName": "Hong Kong",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 22.365581,
+            "lng": 114.11932
+        },
+        {
+            "name": "HKG",
+            "longName": "Hong Kong",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 22.266098,
+            "lng": 114.246512
+        },
+        {
+            "name": "BUD01",
+            "longName": "Budapest",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 47.529711,
+            "lng": 19.208736
+        },
+        {
+            "name": "MAA02",
+            "longName": "Chennai",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 13.06819,
+            "lng": 80.2788438
+        },
+        {
+            "name": "BOM02",
+            "longName": "Mumbai",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 19.020964,
+            "lng": 72.830246
+        },
+        {
+            "name": "DEL01",
+            "longName": "New Delhi",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 28.54313,
+            "lng": 77.2400015
+        },
+        {
+            "name": "MAA30",
+            "longName": "Chennai",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 13.02477838,
+            "lng": 80.27267354
+        },
+        {
+            "name": "BOM30",
+            "longName": "Mumbai",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 19.08596,
+            "lng": 72.8351317
+        },
+        {
+            "name": "HYD50",
+            "longName": "Hyderabad",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 17.41316402,
+            "lng": 78.44976352
+        },
+        {
+            "name": "JKT01",
+            "longName": "Jakarta",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": -6.21689022,
+            "lng": 106.8320997
+        },
+        {
+            "name": "DB3",
+            "longName": "Dublin",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 53.324237,
+            "lng": -6.453237
+        },
+        {
+            "name": "DBB",
+            "longName": "Dublin",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 53.33095253,
+            "lng": -6.36225111
+        },
+        {
+            "name": "DUB30",
+            "longName": "Dublin",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 53.4111775,
+            "lng": -6.34642117
+        },
+        {
+            "name": "MIL30",
+            "longName": "Milan",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 45.47745705,
+            "lng": 9.10186577
+        },
+        {
+            "name": "OSA02",
+            "longName": "Osaka",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 34.695362,
+            "lng": 135.491108
+        },
+        {
+            "name": "OSA30",
+            "longName": "Osaka",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 34.694601,
+            "lng": 135.491389
+        },
+        {
+            "name": "TYA",
+            "longName": "Tokyo",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 35.68824,
+            "lng": 139.76603
+        },
+        {
+            "name": "TYB",
+            "longName": "Tokyo",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 35.68752778,
+            "lng": 139.7794444
+        },
+        {
+            "name": "TYO01",
+            "longName": "Kita-ku",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 35.739426,
+            "lng": 139.766692
+        },
+        {
+            "name": "KAW",
+            "longName": "Saitama",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 35.827929,
+            "lng": 139.720796
+        },
+        {
+            "name": "OSA03",
+            "longName": "Osaka",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 34.675756,
+            "lng": 135.495602
+        },
+        {
+            "name": "PUS03",
+            "longName": "Busan",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 35.11128344,
+            "lng": 129.0390939
+        },
+        {
+            "name": "SLA",
+            "longName": "seoul",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 37.48190088,
+            "lng": 126.879437
+        },
+        {
+            "name": "KUL02",
+            "longName": "Cyberjaya",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 2.912957,
+            "lng": 101.65567
+        },
+        {
+            "name": "KUL30",
+            "longName": "Kuala Lumpur",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 3.14962246,
+            "lng": 101.7063104
+        },
+        {
+            "name": "MEX30",
+            "longName": "Municipio El Marqu\u00e9s",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 20.56696999,
+            "lng": -100.2566087
+        },
+        {
+            "name": "REX01",
+            "longName": "Reynosa",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 26.07064096,
+            "lng": -98.37208688
+        },
+        {
+            "name": "AM1",
+            "longName": "Amsterdam",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 52.3444881,
+            "lng": 4.83009813
+        },
+        {
+            "name": "AMB",
+            "longName": "Amsterdam-Zuidoost",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 52.29344857,
+            "lng": 4.9453064
+        },
+        {
+            "name": "AKL01",
+            "longName": "Auckland",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": -36.750106,
+            "lng": 174.696394
+        },
+        {
+            "name": "MCT50",
+            "longName": "Wattayah",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 23.6087252,
+            "lng": 58.51149954
+        },
+        {
+            "name": "ASU50",
+            "longName": "Villa Elisa",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": -25.38455515,
+            "lng": -57.5934642
+        },
+        {
+            "name": "MNL30",
+            "longName": "Pasig City 1602",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 14.56980046,
+            "lng": 121.0703974
+        },
+        {
+            "name": "MNL50",
+            "longName": "Makati City",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 14.5592,
+            "lng": 121.020073
+        },
+        {
+            "name": "WAW01",
+            "longName": "Warsaw",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 52.227661,
+            "lng": 21.00425
+        },
+        {
+            "name": "LIS01",
+            "longName": "Prior Velho",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 38.78794667,
+            "lng": -9.12334446
+        },
+        {
+            "name": "PR1",
+            "longName": "Humacao",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 18.13784765,
+            "lng": -65.82491267
+        },
+        {
+            "name": "DOH01",
+            "longName": "Doha",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 25.29,
+            "lng": 51.52
+        },
+        {
+            "name": "BUH01",
+            "longName": "Bucharest",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 44.48165321,
+            "lng": 26.12072563
+        },
+        {
+            "name": "MSA",
+            "longName": "Moscow",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 55.80531,
+            "lng": 37.55191
+        },
+        {
+            "name": "JED01",
+            "longName": "Jeddah",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 21.46466651,
+            "lng": 39.21251097
+        },
+        {
+            "name": "SGE",
+            "longName": "Singapore",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 1.29526805,
+            "lng": 103.7898039
+        },
+        {
+            "name": "CPT02",
+            "longName": "Cape Town",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": -33.970401,
+            "lng": 18.46456
+        },
+        {
+            "name": "JNB02",
+            "longName": "Isando",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": -26.13778,
+            "lng": 28.19756
+        },
+        {
+            "name": "CPT01",
+            "longName": "Parow",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": -33.89010135,
+            "lng": 18.5659351
+        },
+        {
+            "name": "JNB01",
+            "longName": "Randburg",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": -26.10334653,
+            "lng": 28.00093938
+        },
+        {
+            "name": "BCN30",
+            "longName": "Barcelona",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 41.351583,
+            "lng": 2.137444
+        },
+        {
+            "name": "MAD30",
+            "longName": "Madrid",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 40.43953449,
+            "lng": -3.62126495
+        },
+        {
+            "name": "CMB01",
+            "longName": "Colombo",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 6.87479308,
+            "lng": 79.86109369
+        },
+        {
+            "name": "STO",
+            "longName": "Bromma",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 59.36269,
+            "lng": 17.95558
+        },
+        {
+            "name": "ZRH",
+            "longName": "Glattbrugg",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 47.43277114,
+            "lng": 8.55732926
+        },
+        {
+            "name": "TPE31",
+            "longName": "Taipei City",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 25.074087,
+            "lng": 121.577159
+        },
+        {
+            "name": "TPE30",
+            "longName": "Taipei",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 25.03230128,
+            "lng": 121.5250782
+        },
+        {
+            "name": "TPE50",
+            "longName": "Taipei City",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 25,
+            "lng": 121.5
+        },
+        {
+            "name": "BKK30",
+            "longName": "Bangkok",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 14.100389,
+            "lng": 100.616972
+        },
+        {
+            "name": "BKK01",
+            "longName": "Nonthaburi",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 13.20527146,
+            "lng": 100.5211914
+        },
+        {
+            "name": "BKK02",
+            "longName": "Nonthaburi",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 14.109416,
+            "lng": 100.548323
+        },
+        {
+            "name": "BKK50",
+            "longName": "Bangrak",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 12.526558,
+            "lng": 100.514167
+        },
+        {
+            "name": "FJR01",
+            "longName": "Fujairah",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 25.27,
+            "lng": 55.31
+        },
+        {
+            "name": "MAN30",
+            "longName": "Manchester",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 53.463032,
+            "lng": -2.235833
+        },
+        {
+            "name": "LTS",
+            "longName": "London",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 51.49979062,
+            "lng": -0.01064941
+        },
+        {
+            "name": "ANC01",
+            "longName": "Anchorage",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 61.21011047,
+            "lng": -149.7416036
+        },
+        {
+            "name": "ASH",
+            "longName": "Ashburn",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 39.01645926,
+            "lng": -77.45901527
+        },
+        {
+            "name": "ATA",
+            "longName": "Atlanta",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 33.7554496,
+            "lng": -84.39134264
+        },
+        {
+            "name": "CHG",
+            "longName": "Chicago",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 41.853669,
+            "lng": -87.61831697
+        },
+        {
+            "name": "DAL",
+            "longName": "Dallas",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 32.80083632,
+            "lng": -96.81961914
+        },
+        {
+            "name": "ELP02",
+            "longName": "El Paso",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 31.7552246,
+            "lng": -106.4931005
+        },
+        {
+            "name": "HFD50",
+            "longName": "Storrs",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 41.80916432,
+            "lng": -72.25716447
+        },
+        {
+            "name": "HNL01",
+            "longName": "Honolulu",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 21.33496983,
+            "lng": -157.9167933
+        },
+        {
+            "name": "HOU01",
+            "longName": "Houston",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 29.84425973,
+            "lng": -95.55659799
+        },
+        {
+            "name": "LAS01",
+            "longName": "Las Vegas",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 36.059927,
+            "lng": -115.21029
+        },
+        {
+            "name": "LAX",
+            "longName": "Los Angeles",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 34.04793249,
+            "lng": -118.2555807
+        },
+        {
+            "name": "MIA",
+            "longName": "Miami",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 25.78228282,
+            "lng": -80.19299909
+        },
+        {
+            "name": "NYC",
+            "longName": "New York",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 40.74108084,
+            "lng": -74.00270384
+        },
+        {
+            "name": "PAO",
+            "longName": "Palo Alto",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 38.24598008,
+            "lng": -122.1607295
+        },
+        {
+            "name": "PHX01",
+            "longName": "Chandler",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 33.270825,
+            "lng": -111.381678
+        },
+        {
+            "name": "PIT50",
+            "longName": "Pittsburgh",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 40.44561,
+            "lng": -79.94921457
+        },
+        {
+            "name": "SJC",
+            "longName": "San Jose",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 36.64169697,
+            "lng": -121.4830866
+        },
+        {
+            "name": "SN1",
+            "longName": "San Antonio",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 29.48000319,
+            "lng": -98.69249716
+        },
+        {
+            "name": "STB",
+            "longName": "Seattle",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 47.614353,
+            "lng": -122.33886
+        },
+        {
+            "name": "CO2",
+            "longName": "Quincy",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": 47.238834,
+            "lng": -119.859341
+        },
+        {
+            "name": "MVD50",
+            "longName": "Pando",
+            "type": "PoP",
+            "status": "available",
+            "size": 0.2,
+            "lat": -34.7,
+            "lng": -55.9
+        }
+    ]
+}

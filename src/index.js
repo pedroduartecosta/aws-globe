@@ -16,6 +16,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import countries from "./files/globe-data-min.json";
 import awsRegionsData from "./files/regions-data-aws.json";
 import googleRegionsData from "./files/regions-data-google.json";
+import azureRegionsData from "./files/regions-data-azure.json";
 import labelfont from "../assets/src/files/helvetiker_bold.typeface.json"
 
 var renderer, camera, scene, controls;
@@ -25,9 +26,11 @@ let windowHalfX = window.innerWidth / 2;
 let windowHalfY = window.innerHeight / 2;
 var GlobeRegionsAWS;
 var GlobeRegionsGoogle;
+var GlobeRegionsAzure;
 let isLongName = true; // Default display mode
 let selectedProvider = 'AWS'; // Default provider
 let showLocalZones = false; // Default local zones visibility
+let showPoPs = false; // Default PoPs visibility
 
 init();
 initGlobes();
@@ -108,14 +111,21 @@ function init() {
   });
   document.getElementById('nameDisplaySelect').addEventListener('change', updateNameDisplay);
   document.getElementById('localZonesCheckbox').addEventListener('change', toggleLocalZones);
-
+  document.getElementById('popCheckbox').addEventListener('change', togglePoPs);
+  document.getElementById('cloudProviderSelect').addEventListener('change', uncheckCheckboxes);
 }
 
+function uncheckCheckboxes() {
+  document.getElementById('localZonesCheckbox').checked = false;
+  document.getElementById('popCheckbox').checked = false;
+}
 
 function initGlobes() {
   if (!GlobeRegionsAWS && !GlobeRegionsGoogle) {
     GlobeRegionsAWS = initGlobe(true, awsRegionsData);
     GlobeRegionsGoogle = initGlobe(false, googleRegionsData);
+    GlobeRegionsAzure = initGlobe(false, azureRegionsData);
+
   }
 }
 
@@ -123,13 +133,21 @@ function loadProviderData(provider) {
   switch (provider) {
     case 'aws':
       scene.remove(GlobeRegionsGoogle);
+      scene.remove(GlobeRegionsAzure);
       scene.add(GlobeRegionsAWS);
       selectedProvider = 'AWS';
       break;
     case 'google':
       scene.remove(GlobeRegionsAWS);
+      scene.remove(GlobeRegionsAzure);
       scene.add(GlobeRegionsGoogle);
       selectedProvider = 'Google';
+      break;
+    case 'azure':
+      scene.remove(GlobeRegionsAWS);
+      scene.remove(GlobeRegionsGoogle);
+      scene.add(GlobeRegionsAzure); // Add Azure globe
+      selectedProvider = 'Azure';
       break;
     default:
       console.error('Unknown provider:', provider);
@@ -145,6 +163,22 @@ function toggleLocalZones() {
     updateGlobe(GlobeRegionsAWS, awsRegionsData);
   } else if (selectedProvider === 'Google') {
     updateGlobe(GlobeRegionsGoogle, googleRegionsData);
+  } else if (selectedProvider === 'Azure') {
+    updateGlobe(GlobeRegionsAzure, azureRegionsData);
+  }
+
+}
+
+function togglePoPs() {
+  showPoPs = showPoPs ? false : true;
+
+  // Check which globe is currently visible
+  if (selectedProvider === 'AWS') {
+    updateGlobe(GlobeRegionsAWS, awsRegionsData);
+  } else if (selectedProvider === 'Google') {
+    updateGlobe(GlobeRegionsGoogle, googleRegionsData);
+  } else if (selectedProvider === 'Azure') {
+    updateGlobe(GlobeRegionsAzure, azureRegionsData);
   }
 
 }
@@ -158,6 +192,8 @@ function updateNameDisplay() {
     updateGlobe(GlobeRegionsAWS, awsRegionsData);
   } else if (selectedProvider === 'Google') {
     updateGlobe(GlobeRegionsGoogle, googleRegionsData);
+  } else if (selectedProvider === 'Azure') {
+    updateGlobe(GlobeRegionsAzure, azureRegionsData);
   }
 }
 
@@ -165,7 +201,7 @@ function updateNameDisplay() {
 function updateGlobe(globe, regionsData) {
   // Filter data based on local zones visibility
   const filteredRegionsData = regionsData.regions.filter((e) =>
-    e.type === "Region" || (showLocalZones && e.type === "Local Zone"));
+    e.type === "Region" || (showLocalZones && e.type === "Local Zone") || (showPoPs && e.type === "PoP"));
 
   // Update the labels on the globe
   globe
@@ -184,6 +220,8 @@ function updateGlobe(globe, regionsData) {
         return "#ff6633";
       } else if (e.type == "Local Zone") {
         return "#ffee53"
+      } else if (e.type == "PoP") {
+        return "#337aff"
       } else return "#ff6633";
     })
     .labelDotRadius((e) => {
@@ -191,6 +229,8 @@ function updateGlobe(globe, regionsData) {
         return 1;
       } else if (e.type == "Local Zone") {
         return 0.5;
+      } else if (e.type == "PoP") {
+        return 0.4;
       } else return 0;
     })
     .labelSize((e) => {
@@ -198,7 +238,18 @@ function updateGlobe(globe, regionsData) {
         return 1.2;
       } else if (e.type == "Local Zone") {
         return 0.8;
+      } else if (e.type == "PoP") {
+        return 0.7;
       } else return 0;
+    })
+    .labelText((e) => {
+      if (e.type == "Region") {
+        return isLongName ? e.longName : e.name;
+      } else if (e.type == "Local Zone") {
+        return isLongName ? e.longName : e.name;
+      } else if (e.type == "PoP") {
+        return isLongName ? e.longName : e.name;
+      } else return "";
     })
     .labelResolution(6)
     .labelAltitude((e) => {
@@ -206,13 +257,13 @@ function updateGlobe(globe, regionsData) {
         return 0.02;
       } else if (e.type == "Local Zone") {
         return 0.01;
+      } else if (e.type == "PoP") {
+        return 0.005;
       } else return 0;
     })
     .labelDotOrientation((e) => {
       if (e.type == "Region") {
         return "right";
-      } else if (e.type == "Local Zone") {
-        return "left";
       } else return "left";
     })
     .labelTypeFace(labelfont)
@@ -225,6 +276,8 @@ function updateGlobe(globe, regionsData) {
         return "#ff6633";
       } else if (e.type == "Local Zone") {
         return "#ffee53"
+      } else if (e.type == "PoP") {
+        return "#337aff"
       } else return "#ff6633";
     })
     .pointsMerge(true)
@@ -260,7 +313,7 @@ function initGlobe(addToScene, regionsData) {
 
   // Filter data based on local zones visibility
   const filteredRegionsData = regionsData.regions.filter((e) =>
-    e.type === "Region" || (showLocalZones && e.type === "Local Zone"));
+    e.type === "Region" || (showLocalZones && e.type === "Local Zone") || (showPoPs && e.type === "PoP"));
 
 
   // NOTE Arc animations are followed after the globe enters the scene
@@ -285,6 +338,8 @@ function initGlobe(addToScene, regionsData) {
           return "#ff6633";
         } else if (e.type == "Local Zone") {
           return "#ffee53"
+        } else if (e.type == "PoP") {
+          return "#337aff"
         } else return "#ff6633";
       })
       .labelDotRadius((e) => {
@@ -292,6 +347,8 @@ function initGlobe(addToScene, regionsData) {
           return 1;
         } else if (e.type == "Local Zone") {
           return 0.5;
+        } else if (e.type == "PoP") {
+          return 0.4;
         } else return 0;
       })
       .labelSize((e) => {
@@ -299,12 +356,16 @@ function initGlobe(addToScene, regionsData) {
           return 1.2;
         } else if (e.type == "Local Zone") {
           return 0.8;
+        } else if (e.type == "PoP") {
+          return 0.7;
         } else return 0;
       })
       .labelText((e) => {
         if (e.type == "Region") {
           return isLongName ? e.longName : e.name;
         } else if (e.type == "Local Zone") {
+          return isLongName ? e.longName : e.name;
+        } else if (e.type == "PoP") {
           return isLongName ? e.longName : e.name;
         } else return "";
       })
@@ -314,13 +375,13 @@ function initGlobe(addToScene, regionsData) {
           return 0.02;
         } else if (e.type == "Local Zone") {
           return 0.01;
+        } else if (e.type == "PoP") {
+          return 0.005;
         } else return 0;
       })
       .labelDotOrientation((e) => {
         if (e.type == "Region") {
           return "right";
-        } else if (e.type == "Local Zone") {
-          return "left";
         } else return "left";
       })
       .labelTypeFace(labelfont)
@@ -333,6 +394,8 @@ function initGlobe(addToScene, regionsData) {
           return "#ff6633";
         } else if (e.type == "Local Zone") {
           return "#ffee53"
+        } else if (e.type == "PoP") {
+          return "#337aff"
         } else return "#ff6633";
       })
       .pointsMerge(true)
