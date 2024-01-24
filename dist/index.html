@@ -85,6 +85,37 @@
         /* Add select styling here if needed */
         width: 150px; /* Adjust width as needed */
       }
+
+      /* Style for the checkbox label */
+      .checkbox-label {
+        display: flex;
+        align-items: center;
+      }
+
+      /* Style for the checkbox */
+      .checkbox-input {
+        margin-right: 5px; /* Spacing between checkbox and label text */
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #f1f3f3;
+        border-radius: 4px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Style for the checked checkbox */
+      .checkbox-input:checked {
+        background-color: #f1f3f3;
+        border: 2px solid #f1f3f3;
+      }
+
+      /* Style for the checkbox label text */
+      .checkbox-text {
+        font-family: "Helvetica";
+      }
     </style>
   </head>
   <body>
@@ -110,12 +141,21 @@
           <option value="shortName">Code</option>
         </select>
       </div>
+
+      <!-- Local Zones Toggle -->
+      <div id="localZonesToggle" class="label-container checkbox-label">
+        <label for="localZonesCheckbox" class="checkbox-text"
+          >Show Local Zones
+        </label>
+        <input type="checkbox" id="localZonesCheckbox" class="checkbox-input" />
+      </div>
     </div>
 
     <footer>
       <small>
-        <p style="color: #f1f3f3">Available Regions</p>
-        <p style="color: #ff6633">Coming Soon</p>
+        <p style="color: #f1f3f3">Regions</p>
+        <p style="color: #ffee53">Local Zones</p>
+        <p style="color: #ff6633">New Announced Regions</p>
       </small>
     </footer>
 

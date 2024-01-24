@@ -23,10 +23,11 @@ let mouseX = 0;
 let mouseY = 0;
 let windowHalfX = window.innerWidth / 2;
 let windowHalfY = window.innerHeight / 2;
-var GlobeRegionsAWSLongName, GlobeRegionsAWSName;
-var GlobeRegionsGoogleLongName, GlobeRegionsGoogleName;
+var GlobeRegionsAWS;
+var GlobeRegionsGoogle;
 let isLongName = true; // Default display mode
 let selectedProvider = 'AWS'; // Default provider
+let showLocalZones = false; // Default local zones visibility
 
 init();
 initGlobes();
@@ -102,40 +103,32 @@ function init() {
   //document.addEventListener("touchstart", onMouseDown, false);
   //document.addEventListener("touchend", onMouseUp, false);
   document.getElementById('cloudProviderSelect').addEventListener('change', (event) => {
-    const selectedOption = event.target.value;
-    loadProviderData(selectedOption);
+    selectedProvider = event.target.value;
+    loadProviderData(selectedProvider);
   });
-  document.getElementById('nameDisplaySelect').addEventListener('change', (event) => {
-    const isLongName = event.target.value === 'longName';
-    updateNameDisplay(isLongName);
-  });
+  document.getElementById('nameDisplaySelect').addEventListener('change', updateNameDisplay);
+  document.getElementById('localZonesCheckbox').addEventListener('change', toggleLocalZones);
 
 }
 
-function initGlobes() {
-  // Initialize AWS Globes
-  GlobeRegionsAWSLongName = initGlobe("longName", true, awsRegionsData);
-  GlobeRegionsAWSName = initGlobe("name", false, awsRegionsData);
 
-  // Initialize Google Globes
-  GlobeRegionsGoogleLongName = initGlobe("longName", false, googleRegionsData);
-  GlobeRegionsGoogleName = initGlobe("name", false, googleRegionsData);
+function initGlobes() {
+  if (!GlobeRegionsAWS && !GlobeRegionsGoogle) {
+    GlobeRegionsAWS = initGlobe(true, awsRegionsData);
+    GlobeRegionsGoogle = initGlobe(false, googleRegionsData);
+  }
 }
 
 function loadProviderData(provider) {
-  console.log("Loading " + provider + " data");
-
   switch (provider) {
     case 'aws':
-      scene.remove(GlobeRegionsGoogleLongName);
-      scene.remove(GlobeRegionsGoogleName);
-      scene.add(isLongName ? GlobeRegionsAWSLongName : GlobeRegionsAWSName);
+      scene.remove(GlobeRegionsGoogle);
+      scene.add(GlobeRegionsAWS);
       selectedProvider = 'AWS';
       break;
     case 'google':
-      scene.remove(GlobeRegionsAWSLongName);
-      scene.remove(GlobeRegionsAWSName);
-      scene.add(isLongName ? GlobeRegionsGoogleLongName : GlobeRegionsGoogleName);
+      scene.remove(GlobeRegionsAWS);
+      scene.add(GlobeRegionsGoogle);
       selectedProvider = 'Google';
       break;
     default:
@@ -144,43 +137,106 @@ function loadProviderData(provider) {
 }
 
 
+function toggleLocalZones() {
+  showLocalZones = showLocalZones ? false : true;
 
-function updateNameDisplay(longName) {
-  // Determine which set of globes to show and hide based on the provider
-  var globeToShowLongName, globeToShowName, globeToHideLongName, globeToHideName;
-
+  // Check which globe is currently visible
   if (selectedProvider === 'AWS') {
-    globeToShowLongName = GlobeRegionsAWSLongName;
-    globeToShowName = GlobeRegionsAWSName;
-    globeToHideLongName = GlobeRegionsGoogleLongName;
-    globeToHideName = GlobeRegionsGoogleName;
+    updateGlobe(GlobeRegionsAWS, awsRegionsData);
   } else if (selectedProvider === 'Google') {
-    globeToShowLongName = GlobeRegionsGoogleLongName;
-    globeToShowName = GlobeRegionsGoogleName;
-    globeToHideLongName = GlobeRegionsAWSLongName;
-    globeToHideName = GlobeRegionsAWSName;
-  } else {
-    console.error('Unknown provider:', provider);
-    return;
+    updateGlobe(GlobeRegionsGoogle, googleRegionsData);
   }
 
-  // Hide the globes of the other provider
-  scene.remove(globeToHideLongName);
-  scene.remove(globeToHideName);
+}
 
-  // Show the appropriate globe based on the longName flag
-  if (longName) {
-    scene.add(globeToShowLongName);
-    scene.remove(globeToShowName);
-  } else {
-    scene.add(globeToShowName);
-    scene.remove(globeToShowLongName);
+
+function updateNameDisplay() {
+  isLongName = isLongName ? false : true;
+
+  // Check which globe is currently visible
+  if (selectedProvider === 'AWS') {
+    updateGlobe(GlobeRegionsAWS, awsRegionsData);
+  } else if (selectedProvider === 'Google') {
+    updateGlobe(GlobeRegionsGoogle, googleRegionsData);
   }
 }
 
 
+function updateGlobe(globe, regionsData) {
+  // Filter data based on local zones visibility
+  const filteredRegionsData = regionsData.regions.filter((e) =>
+    e.type === "Region" || (showLocalZones && e.type === "Local Zone"));
+
+  // Update the labels on the globe
+  globe
+    .labelsData(filteredRegionsData.map((e) => {
+      return {
+        ...e,
+        name: isLongName ? e.longName : e.name,
+      };
+    }))
+    .labelsTransitionDuration(0)
+    .labelColor((e) => {
+      if (e.type == "Region") {
+        if (e.status == "available") {
+          return "#f1f3f3";
+        }
+        return "#ff6633";
+      } else if (e.type == "Local Zone") {
+        return "#ffee53"
+      } else return "#ff6633";
+    })
+    .labelDotRadius((e) => {
+      if (e.type == "Region") {
+        return 1;
+      } else if (e.type == "Local Zone") {
+        return 0.5;
+      } else return 0;
+    })
+    .labelSize((e) => {
+      if (e.type == "Region") {
+        return 1.2;
+      } else if (e.type == "Local Zone") {
+        return 0.8;
+      } else return 0;
+    })
+    .labelResolution(6)
+    .labelAltitude((e) => {
+      if (e.type == "Region") {
+        return 0.02;
+      } else if (e.type == "Local Zone") {
+        return 0.01;
+      } else return 0;
+    })
+    .labelDotOrientation((e) => {
+      if (e.type == "Region") {
+        return "right";
+      } else if (e.type == "Local Zone") {
+        return "left";
+      } else return "left";
+    })
+    .labelTypeFace(labelfont)
+    .pointsData(filteredRegionsData.filter((e) => e.type == "Region"))
+    .pointColor((e) => {
+      if (e.type == "Region") {
+        if (e.status == "available") {
+          return "#f1f3f3";
+        }
+        return "#ff6633";
+      } else if (e.type == "Local Zone") {
+        return "#ffee53"
+      } else return "#ff6633";
+    })
+    .pointsMerge(true)
+    .pointAltitude(0.17)
+    .pointRadius(0.05);
+
+}
+
+
+
 // SECTION Globe
-function initGlobe(labelText, addToScene, regionsData) {
+function initGlobe(addToScene, regionsData) {
   // Initialize the Globe
   let Globe = new ThreeGlobe({
     waitForGlobeReady: true,
@@ -202,31 +258,81 @@ function initGlobe(labelText, addToScene, regionsData) {
       } else return "rgba(255,153,0, 0.8)";
     });
 
+  // Filter data based on local zones visibility
+  const filteredRegionsData = regionsData.regions.filter((e) =>
+    e.type === "Region" || (showLocalZones && e.type === "Local Zone"));
+
+
   // NOTE Arc animations are followed after the globe enters the scene
   setTimeout(() => {
     Globe
-      .ringsData(regionsData.regions)
-      .ringAltitude(0.05)
-      .ringMaxRadius(2)
-      .ringColor(() => "#f1f3f3")
-      .ringRepeatPeriod(100)
-      .labelsData(regionsData.regions)
+      // .ringsData(regionsData.regions)
+      // .ringAltitude(0.05)
+      // .ringMaxRadius(2)
+      // .ringColor(() => "#f1f3f3")
+      // .ringRepeatPeriod(100)
+      .labelsData(filteredRegionsData.map((e) => {
+        return {
+          ...e,
+          name: isLongName ? e.longName : e.name,
+        };
+      }))
       .labelColor((e) => {
-        if (e.type == "GA") {
-          return "#f1f3f3";
+        if (e.type == "Region") {
+          if (e.status == "available") {
+            return "#f1f3f3";
+          }
+          return "#ff6633";
+        } else if (e.type == "Local Zone") {
+          return "#ffee53"
         } else return "#ff6633";
       })
-      .labelDotRadius(1)
-      .labelSize(1.2)
-      .labelText(labelText)
+      .labelDotRadius((e) => {
+        if (e.type == "Region") {
+          return 1;
+        } else if (e.type == "Local Zone") {
+          return 0.5;
+        } else return 0;
+      })
+      .labelSize((e) => {
+        if (e.type == "Region") {
+          return 1.2;
+        } else if (e.type == "Local Zone") {
+          return 0.8;
+        } else return 0;
+      })
+      .labelText((e) => {
+        if (e.type == "Region") {
+          return isLongName ? e.longName : e.name;
+        } else if (e.type == "Local Zone") {
+          return isLongName ? e.longName : e.name;
+        } else return "";
+      })
       .labelResolution(6)
-      .labelAltitude(0.02)
-      .labelDotOrientation(() => 'right')
+      .labelAltitude((e) => {
+        if (e.type == "Region") {
+          return 0.02;
+        } else if (e.type == "Local Zone") {
+          return 0.01;
+        } else return 0;
+      })
+      .labelDotOrientation((e) => {
+        if (e.type == "Region") {
+          return "right";
+        } else if (e.type == "Local Zone") {
+          return "left";
+        } else return "left";
+      })
       .labelTypeFace(labelfont)
-      .pointsData(regionsData.regions)
+      .pointsData(filteredRegionsData.filter((e) => e.type == "Region"))
       .pointColor((e) => {
-        if (e.type == "GA") {
-          return "#f1f3f3";
+        if (e.type == "Region") {
+          if (e.status == "available") {
+            return "#f1f3f3";
+          }
+          return "#ff6633";
+        } else if (e.type == "Local Zone") {
+          return "#ffee53"
         } else return "#ff6633";
       })
       .pointsMerge(true)
@@ -256,17 +362,6 @@ function onMouseMove(event) {
   mouseY = event.clientY - windowHalfY;
   // console.log("x: " + mouseX + " y: " + mouseY);
 }
-
-function onMouseDown(event) {
-  scene.remove(GlobeRegionsLongName);
-  scene.add(GlobeRegionsName);
-}
-
-function onMouseUp(event) {
-  scene.remove(GlobeRegionsName);
-  scene.add(GlobeRegionsLongName);
-}
-
 
 
 function onWindowResize() {
