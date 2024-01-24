@@ -90,7 +90,7 @@ function init() {
   controls.enableDamping = true;
   controls.dynamicDampingFactor = 0.01;
   controls.enablePan = false;
-  controls.minDistance = 250;
+  controls.minDistance = 170;
   controls.maxDistance = 500;
   controls.rotateSpeed = 0.8;
   controls.zoomSpeed = 0.5;
@@ -118,6 +118,7 @@ function init() {
 function uncheckCheckboxes() {
   document.getElementById('localZonesCheckbox').checked = false;
   document.getElementById('popCheckbox').checked = false;
+  document.getElementById('nameDisplaySelect').value = 'longName';
 }
 
 function initGlobes() {
