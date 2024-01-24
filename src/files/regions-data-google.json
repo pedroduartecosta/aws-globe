@@ -2,7 +2,7 @@
   "type": "GoogleCloudRegions",
   "regions": [
     {
-      "name": "to-be-announced",
+      "name": "mexico",
       "longName": "Mexico",
       "type": "Region",
       "status": "unavailable",
@@ -11,7 +11,7 @@
       "lng": -102.26651143446024
     },
     {
-      "name": "to-be-announced",
+      "name": "malaysia",
       "longName": "Malaysia",
       "type": "Region",
       "status": "unavailable",
@@ -20,7 +20,7 @@
       "lng": 101.57443056527343
     },
     {
-      "name": "to-be-announced",
+      "name": "thailand",
       "longName": "Thailand",
       "type": "Region",
       "status": "unavailable",
@@ -29,7 +29,7 @@
       "lng": 101.03208293726394
     },
     {
-      "name": "to-be-announced",
+      "name": "new zealand",
       "longName": "New Zealand",
       "type": "Region",
       "status": "unavailable",
@@ -38,7 +38,7 @@
       "lng": 172.06769022607816
     },
     {
-      "name": "to-be-announced",
+      "name": "greece",
       "longName": "Greece",
       "type": "Region",
       "status": "unavailable",
@@ -47,7 +47,7 @@
       "lng": 22.53593695565274
     },
     {
-      "name": "to-be-announced",
+      "name": "norway",
       "longName": "Norway",
       "type": "Region",
       "status": "unavailable",
@@ -56,7 +56,7 @@
       "lng": 9.384622597543382
     },
     {
-      "name": "to-be-announced",
+      "name": "south africa",
       "longName": "South Africa",
       "type": "Region",
       "status": "unavailable",
@@ -65,7 +65,7 @@
       "lng": 23.623517052180652
     },
     {
-      "name": "to-be-announced",
+      "name": "austria",
       "longName": "Austria",
       "type": "Region",
       "status": "unavailable",
@@ -74,7 +74,7 @@
       "lng": 14.159826702305013
     },
     {
-      "name": "to-be-announced",
+      "name": "sweden",
       "longName": "Sweden",
       "type": "Region",
       "status": "unavailable",

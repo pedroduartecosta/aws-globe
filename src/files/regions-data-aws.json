@@ -2,7 +2,7 @@
   "type": "RegionsCollection",
   "regions": [
     {
-      "name": "to-be-announced",
+      "name": "germany",
       "longName": "Germany",
       "type": "Region",
       "status": "unavailable",
@@ -11,7 +11,7 @@
       "lng": 10.319348079866192
     },
     {
-      "name": "to-be-announced",
+      "name": "thailand",
       "longName": "Thailand",
       "type": "Region",
       "status": "unavailable",
@@ -20,7 +20,7 @@
       "lng": 100.89831660674983
     },
     {
-      "name": "to-be-announced",
+      "name": "new zealand",
       "longName": "New Zealand",
       "type": "Region",
       "status": "unavailable",
@@ -29,7 +29,7 @@
       "lng": 172.06769022607816
     },
     {
-      "name": "to-be-announced",
+      "name": "malaysia",
       "longName": "Malaysia",
       "type": "Region",
       "status": "unavailable",
