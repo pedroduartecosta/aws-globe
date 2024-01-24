@@ -130,6 +130,10 @@ function initGlobes() {
 }
 
 function loadProviderData(provider) {
+  isLongName = true; // Default display mode
+  showLocalZones = false; // Default local zones visibility
+  showPoPs = false; // Default PoPs visibility
+
   switch (provider) {
     case 'aws':
       scene.remove(GlobeRegionsGoogle);
