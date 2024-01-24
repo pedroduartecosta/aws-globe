@@ -49,7 +49,7 @@ function init() {
   // Initialize scene, light
   scene = new Scene();
   scene.add(new AmbientLight(0xbbbbbb, 0.3));
-  scene.background = new Color(0x192133);
+  scene.background = new Color(0x191b20);
 
   // Initialize camera, light
   camera = new PerspectiveCamera();
