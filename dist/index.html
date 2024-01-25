@@ -13,17 +13,17 @@
         top: 0;
       }
       header {
-        background-color: #232f3e;
+        background-color: #1c2026;
         position: relative;
         z-index: 1;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         align-items: center;
-        box-shadow: 0px 0px 4px 0px black;
+        box-shadow: 0px 0px 4px 0px #131a22;
       }
       footer {
-        background-color: #232f3e;
+        background-color: #21262d;
         position: absolute;
         bottom: 0;
         right: 0;
@@ -32,7 +32,7 @@
         justify-content: space-between;
         flex-wrap: wrap;
         align-items: center;
-        box-shadow: 0px 0px 4px 0px black;
+        box-shadow: 0px 0px 4px 0px #1c2026;
         border-top-left-radius: 4px; /* Add rounded corner on the top left */
         flex-direction: column;
         text-align: right;
@@ -171,7 +171,11 @@
 
     <footer>
       <small>
-        <div id="cloudProviderToggle" class="label-container">
+        <div
+          id="cloudProviderToggle"
+          class="label-container"
+          style="margin-top: 20px"
+        >
           <label for="cloudProviderSelect"></label>
           <select id="cloudProviderSelect">
             <option value="aws">AWS</option>
