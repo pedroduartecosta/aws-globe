@@ -18,8 +18,8 @@
   "author": "Zhanarbek Osmonaliev",
   "license": "ISC",
   "dependencies": {
-    "three": "^0.136.0",
-    "three-globe": "^2.21.3",
+    "three": "^0.160.1",
+    "three-globe": "^2.30.0",
     "three-glow-mesh": "^0.1.2"
   },
   "devDependencies": {
