@@ -498,7 +498,7 @@ function updateGlobe(globe, regionsData) {
       } else return "#ff6633";
     })
     .pointsMerge(true)
-    .pointAltitude(0.17)
+    .pointAltitude(0)
     .pointRadius(0.05);
 
 }
