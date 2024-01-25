@@ -626,7 +626,7 @@ function initGlobe(addToScene, regionsData) {
 
   const EARTH_RADIUS_KM = 6371; // km
   const SAT_SIZE = 80; // km
-  const TIME_STEP = 1 * 1000; // per frame
+  const TIME_STEP = 0.5 * 1000; // per frame
 
   const satGeometry = new OctahedronGeometry(SAT_SIZE * 100 / EARTH_RADIUS_KM / 2, 0);
   const satMaterial = new MeshLambertMaterial({ color: 'palegreen', transparent: true, opacity: 0.3 });
