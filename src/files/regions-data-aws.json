@@ -42,7 +42,7 @@
       "longName": "Cape Town",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 2.31,
       "lat": -33.928992,
       "lng": 18.417396
     },
@@ -51,7 +51,7 @@
       "longName": "Hong Kong",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 2.33,
       "lat": 22.350627,
       "lng": 114.1849161
     },
@@ -60,7 +60,7 @@
       "longName": "Tokyo",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 2.16,
       "lat": 35.6821936,
       "lng": 139.762221
     },
@@ -69,7 +69,7 @@
       "longName": "Seoul",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 2.09,
       "lat": 37.5666791,
       "lng": 126.9782914
     },
@@ -78,7 +78,7 @@
       "longName": "Osaka",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 2.16,
       "lat": 34.6198813,
       "lng": 135.490357
     },
@@ -87,7 +87,7 @@
       "longName": "Mumbai",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1.75,
       "lat": 19.0785451,
       "lng": 72.878176
     },
@@ -96,7 +96,7 @@
       "longName": "Hyderabad",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1.75,
       "lat": 17.360589,
       "lng": 78.4740613
     },
@@ -105,7 +105,7 @@
       "longName": "Singapore",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 2.12,
       "lat": 1.357107,
       "lng": 103.8194992
     },
@@ -114,7 +114,7 @@
       "longName": "Sydney",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 2.15,
       "lat": -33.8698439,
       "lng": 151.2082848
     },
@@ -123,7 +123,7 @@
       "longName": "Jakarta",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 2.12,
       "lat": -6.175247,
       "lng": 106.8270488
     },
@@ -132,7 +132,7 @@
       "longName": "Melbourne",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 2.15,
       "lat": -37.8142454,
       "lng": 144.9631732
     },
@@ -141,7 +141,7 @@
       "longName": "Central",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1.93,
       "lat": -14.183507,
       "lng": 29.0375543
     },
@@ -150,7 +150,7 @@
       "longName": "Calgary",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1.93,
       "lat": 51.0456064,
       "lng": -114.057541
     },
@@ -159,7 +159,7 @@
       "longName": "Frankfurt",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 2.08,
       "lat": 50.1106444,
       "lng": 8.6820917
     },
@@ -168,7 +168,7 @@
       "longName": "Zurich",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 2.29,
       "lat": 47.3744489,
       "lng": 8.5410422
     },
@@ -177,7 +177,7 @@
       "longName": "Stockholm",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1.85,
       "lat": 59.3251172,
       "lng": 18.0710935
     },
@@ -186,7 +186,7 @@
       "longName": "Milan",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 2.04,
       "lat": 45.4641943,
       "lng": 9.1896346
     },
@@ -195,7 +195,7 @@
       "longName": "Spain",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1.95,
       "lat": 39.3260685,
       "lng": -4.8379791
     },
@@ -204,7 +204,7 @@
       "longName": "Ireland",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1.95,
       "lat": 52.865196,
       "lng": -7.9794599
     },
@@ -213,7 +213,7 @@
       "longName": "London",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 2.04,
       "lat": 51.5074456,
       "lng": -0.1277653
     },
@@ -222,7 +222,7 @@
       "longName": "Paris",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 2.04,
       "lat": 48.8588897,
       "lng": 2.3200410217200766
     },
@@ -231,7 +231,7 @@
       "longName": "Tel Aviv",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 2.04,
       "lat": 32.0852997,
       "lng": 34.7818064
     },
@@ -240,7 +240,7 @@
       "longName": "UAE",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 2.14,
       "lat": 24.0002488,
       "lng": 53.9994829
     },
@@ -249,7 +249,7 @@
       "longName": "Bahrain",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 2.14,
       "lat": 25.227707549999998,
       "lng": 55.171549227823945
     },
@@ -258,7 +258,7 @@
       "longName": "Sao Paulo",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 2.77,
       "lat": -23.5506507,
       "lng": -46.6333824
     },
@@ -267,7 +267,7 @@
       "longName": "N. Virginia",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1.74,
       "lat": 42.862124,
       "lng": -84.908993
     },
@@ -276,14 +276,14 @@
       "longName": "Ohio",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1.74,
       "lat": 40.2253569,
       "lng": -82.6881395
     },
     {
       "name": "us-east-1-mci-1",
       "longName": "Kansas City",
-      "type": "Region",
+      "type": "Local Zone",
       "status": "available",
       "size": 1.0,
       "lat": 39.100105,
@@ -294,7 +294,7 @@
       "longName": "US-East",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 2.13,
       "lat": 38.5265037,
       "lng": -110.9958199
     },
@@ -303,7 +303,7 @@
       "longName": "US-West",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 2.13,
       "lat": 47.213055,
       "lng": -122.44758931093395
     },
@@ -312,7 +312,7 @@
       "longName": "N. California",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 2.0,
       "lat": 34.2366266,
       "lng": -117.2037028
     },
@@ -321,7 +321,7 @@
       "longName": "Oregon",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1.74,
       "lat": 43.9792797,
       "lng": -120.737257
     },
