@@ -258,6 +258,77 @@ export function getRegionCounts(): Record<Provider, number> {
   };
 }
 
+function haversineKm(lat1: number, lng1: number, lat2: number, lng2: number): number {
+  const R = 6371;
+  const dLat = ((lat2 - lat1) * Math.PI) / 180;
+  const dLng = ((lng2 - lng1) * Math.PI) / 180;
+  const a =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos((lat1 * Math.PI) / 180) * Math.cos((lat2 * Math.PI) / 180) * Math.sin(dLng / 2) ** 2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+function distanceToLatencyMs(km: number): number {
+  // Fiber ~200k km/s + ~40% overhead + 10ms base
+  return Math.round(km / 140 + 10);
+}
+
+function latencyColor(ms: number): string {
+  if (ms < 50) return 'rgba(0,230,120,0.8)';
+  if (ms < 100) return 'rgba(255,220,0,0.8)';
+  if (ms < 200) return 'rgba(255,140,0,0.8)';
+  return 'rgba(220,50,50,0.8)';
+}
+
+function activeGlobe(): AnyGlobe {
+  if (state.selectedProvider === 'Google') return GlobeRegionsGoogle;
+  if (state.selectedProvider === 'Azure') return GlobeRegionsAzure;
+  return GlobeRegionsAWS;
+}
+
+export function showLatencyArcs(origin: Region, provider: Provider): void {
+  const targets = providerData[provider].regions.filter(
+    r => r.type === 'Region' && r.status === 'available' && r !== origin,
+  );
+
+  const arcs = targets.map(target => {
+    const km = haversineKm(origin.lat, origin.lng, target.lat, target.lng);
+    const ms = distanceToLatencyMs(km);
+    return {
+      startLat: origin.lat,
+      startLng: origin.lng,
+      endLat: target.lat,
+      endLng: target.lng,
+      color: latencyColor(ms),
+      label: `${target.longName}: ~${ms} ms`,
+      alt: Math.min(km / 20000, 0.5),
+    };
+  });
+
+  const globe =
+    provider === 'AWS' ? GlobeRegionsAWS : provider === 'Google' ? GlobeRegionsGoogle : GlobeRegionsAzure;
+
+  globe
+    .arcsData(arcs)
+    .arcStartLat('startLat')
+    .arcStartLng('startLng')
+    .arcEndLat('endLat')
+    .arcEndLng('endLng')
+    .arcColor('color')
+    .arcAltitude('alt')
+    .arcLabel('label')
+    .arcStroke(0.4)
+    .arcDashLength(0.4)
+    .arcDashGap(0.2)
+    .arcDashAnimateTime(2000);
+}
+
+export function clearLatencyArcs(): void {
+  GlobeRegionsAWS?.arcsData([]);
+  GlobeRegionsGoogle?.arcsData([]);
+  GlobeRegionsAzure?.arcsData([]);
+}
+
 export function flyToRegion(lat: number, lng: number): void {
   const phi = ((90 - lat) * Math.PI) / 180;
   const theta = ((lng + 180) * Math.PI) / 180;

@@ -44,12 +44,14 @@ export function initUI(): void {
   globe.setOnRegionClick((region: Region, provider: Provider) => {
     state.selectedRegion = { ...region, provider };
     showInfoPanel(region, provider);
+    globe.showLatencyArcs(region, provider);
   });
 
   // Info panel close
   document.getElementById('infoPanelClose')!.addEventListener('click', () => {
     hideInfoPanel();
     state.selectedRegion = null;
+    globe.clearLatencyArcs();
   });
 
   // Search input
