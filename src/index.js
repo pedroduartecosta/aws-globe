@@ -64503,6 +64503,7 @@ import {
   SphereGeometry,
 } from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import * as satellite from "satellite.js";
 import countries from "./files/globe-data-min.json";
 import awsRegionsData from "./files/regions-data-aws.json";
 import googleRegionsData from "./files/regions-data-google.json";
