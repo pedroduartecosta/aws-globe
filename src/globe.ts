@@ -1,5 +1,5 @@
 import ThreeGlobe from 'three-globe';
-import { Color, OctahedronGeometry, MeshLambertMaterial, Mesh } from 'three';
+import { Color, OctahedronGeometry, MeshLambertMaterial, Mesh, Raycaster, Vector2 } from 'three';
 import * as satellite from 'satellite.js';
 import countries from './files/globe-data-min.json';
 import awsRegionsData from './files/regions-data-aws.json';
@@ -7,7 +7,7 @@ import googleRegionsData from './files/regions-data-google.json';
 import azureRegionsData from './files/regions-data-azure.json';
 import labelfont from '../assets/src/files/helvetiker_bold.typeface.json';
 import tleData from './data/satellites-tle';
-import { scene, camera, controls } from './scene';
+import { scene, camera, controls, renderer } from './scene';
 import { state, cablePaths } from './state';
 import type { Region, RegionsCollection, Provider } from './types';
 
@@ -162,10 +162,7 @@ function buildGlobe(regionsData: RegionsCollection, provider: Provider): AnyGlob
     .pathDashGap(0.008)
     .pathDashAnimateTime(24000)
     .pathPointLat((p: number[]) => p[1])
-    .pathPointLng((p: number[]) => p[0])
-    .onLabelClick((region: Region) => {
-      if (onRegionClick) onRegionClick(region, provider);
-    });
+    .pathPointLng((p: number[]) => p[0]);
 
   updateGlobe(globe, regionsData, provider);
   initSatellites(globe);
@@ -179,6 +176,53 @@ function buildGlobe(regionsData: RegionsCollection, provider: Provider): AnyGlob
   return globe;
 }
 
+function initClickHandler(): void {
+  const raycaster = new Raycaster();
+  let mouseDownPos = { x: 0, y: 0 };
+
+  renderer.domElement.addEventListener('mousedown', e => {
+    mouseDownPos = { x: e.clientX, y: e.clientY };
+  });
+
+  renderer.domElement.addEventListener('click', e => {
+    const dx = Math.abs(e.clientX - mouseDownPos.x);
+    const dy = Math.abs(e.clientY - mouseDownPos.y);
+    if (dx > 5 || dy > 5) return;
+
+    const mouse = new Vector2(
+      (e.clientX / window.innerWidth) * 2 - 1,
+      -(e.clientY / window.innerHeight) * 2 + 1,
+    );
+    raycaster.setFromCamera(mouse, camera);
+    const intersects = raycaster.intersectObjects(scene.children, true);
+
+    for (const { object } of intersects) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      let obj: any = object;
+      while (obj) {
+        if (obj.__globeObjType === 'label' && obj.__data) {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          let root: any = obj;
+          while (root.parent && root.parent !== scene) root = root.parent;
+          const provider: Provider | null =
+            root === GlobeRegionsAWS
+              ? 'AWS'
+              : root === GlobeRegionsGoogle
+                ? 'Google'
+                : root === GlobeRegionsAzure
+                  ? 'Azure'
+                  : null;
+          if (provider && onRegionClick) {
+            onRegionClick(obj.__data as Region, provider);
+          }
+          return;
+        }
+        obj = obj.parent;
+      }
+    }
+  });
+}
+
 export function initGlobes(): void {
   if (GlobeRegionsAWS) return;
 
@@ -187,6 +231,7 @@ export function initGlobes(): void {
   GlobeRegionsAzure = buildGlobe(providerData.Azure, 'Azure');
 
   scene.add(GlobeRegionsAWS);
+  initClickHandler();
 }
 
 export function loadProviderData(provider: string): void {
@@ -331,10 +376,10 @@ export function clearLatencyArcs(): void {
 
 export function flyToRegion(lat: number, lng: number): void {
   const phi = ((90 - lat) * Math.PI) / 180;
-  const theta = ((lng + 180) * Math.PI) / 180;
+  const theta = ((90 - lng) * Math.PI) / 180;
   const distance = 220;
 
-  const targetX = -distance * Math.sin(phi) * Math.cos(theta);
+  const targetX = distance * Math.sin(phi) * Math.cos(theta);
   const targetY = distance * Math.cos(phi);
   const targetZ = distance * Math.sin(phi) * Math.sin(theta);
 

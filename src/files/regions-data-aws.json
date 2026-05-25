@@ -11,31 +11,31 @@
       "lng": 10.319348079866192
     },
     {
-      "name": "thailand",
+      "name": "ap-southeast-7",
       "longName": "Thailand",
       "type": "Region",
-      "status": "unavailable",
-      "size": 1.0,
-      "lat": 15.328669798244867,
-      "lng": 100.89831660674983
+      "status": "available",
+      "size": 2.0,
+      "lat": 13.7563,
+      "lng": 100.5018
     },
     {
-      "name": "new zealand",
+      "name": "ap-southeast-6",
       "longName": "New Zealand",
       "type": "Region",
-      "status": "unavailable",
-      "size": 1.0,
-      "lat": -42.67868146042933,
-      "lng": 172.06769022607816
+      "status": "available",
+      "size": 2.0,
+      "lat": -36.8485,
+      "lng": 174.7633
     },
     {
-      "name": "malaysia",
+      "name": "ap-southeast-5",
       "longName": "Malaysia",
       "type": "Region",
-      "status": "unavailable",
-      "size": 1.0,
-      "lat": 3.7284449030211024,
-      "lng": 102.05965620141095
+      "status": "available",
+      "size": 2.0,
+      "lat": 3.1478,
+      "lng": 101.6953
     },
     {
       "name": "af-south-1",
@@ -45,6 +45,15 @@
       "size": 2.31,
       "lat": -33.928992,
       "lng": 18.417396
+    },
+    {
+      "name": "ap-east-2",
+      "longName": "Taipei",
+      "type": "Region",
+      "status": "available",
+      "size": 2.0,
+      "lat": 25.0375,
+      "lng": 121.5636
     },
     {
       "name": "ap-east-1",
@@ -138,12 +147,12 @@
     },
     {
       "name": "ca-central-1",
-      "longName": "Central",
+      "longName": "Canada Central",
       "type": "Region",
       "status": "available",
       "size": 1.93,
-      "lat": -14.183507,
-      "lng": 29.0375543
+      "lat": 45.5019,
+      "lng": -73.5674
     },
     {
       "name": "ca-west-1",
@@ -250,8 +259,17 @@
       "type": "Region",
       "status": "available",
       "size": 2.14,
-      "lat": 25.227707549999998,
-      "lng": 55.171549227823945
+      "lat": 26.2235,
+      "lng": 50.5822
+    },
+    {
+      "name": "mx-central-1",
+      "longName": "Mexico",
+      "type": "Region",
+      "status": "available",
+      "size": 2.0,
+      "lat": 19.4326,
+      "lng": -99.1332
     },
     {
       "name": "sa-east-1",
@@ -268,8 +286,8 @@
       "type": "Region",
       "status": "available",
       "size": 1.74,
-      "lat": 42.862124,
-      "lng": -84.908993
+      "lat": 39.0437,
+      "lng": -77.4875
     },
     {
       "name": "us-east-2",

@@ -122,8 +122,6 @@ function showInfoPanel(region: Region, provider: Provider): void {
   document.getElementById('infoPanelCode')!.textContent = region.name;
   document.getElementById('infoPanelType')!.textContent = region.type;
   document.getElementById('infoPanelStatus')!.textContent = region.status;
-  document.getElementById('infoPanelCoords')!.textContent =
-    `${region.lat.toFixed(3)}°, ${region.lng.toFixed(3)}°`;
   const link = document.getElementById('infoPanelLink') as HTMLAnchorElement;
   link.href = PROVIDER_DOC_LINKS[provider](region.name);
   panel.style.display = 'block';
