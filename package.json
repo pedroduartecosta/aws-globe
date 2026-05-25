@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config=webpack.prod.js",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --config=webpack.prod.js",
     "build-dev": "webpack --config=webpack.dev.js",
     "start": "webpack serve webpack-dev-server --open --config=webpack.dev.js"
   },
