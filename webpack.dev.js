@@ -2,6 +2,11 @@ const path = require("path");
 
 module.exports = {
   mode: "development",
+  resolve: {
+    alias: {
+      "satellite.js$": path.resolve(__dirname, "src/satellite-browser.js"),
+    },
+  },
   entry: ["./src/index.js"],
   devtool: "inline-source-map",
   devServer: {
