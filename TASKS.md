@@ -9,14 +9,9 @@
 | 3 | **Search / jump-to-region** — text input in header filters regions; clicking a result flies the camera to it | ✅ DONE | `flyToRegion` + `getAllRegions` in globe.ts; search input + dropdown in index.html |
 | 5 | **Region count stats** — overlay in header showing per-provider region counts, updates with filter | ✅ DONE | `getRegionCounts` in globe.ts; `#regionStats` div in header |
 | 9 | **Legend for color coding** — color swatches with labels for all dot colors; switches to provider-color legend in All Providers mode | ✅ DONE | `.legend-dot` swatches; `#allProviderLegend` / `#singleProviderLegend` toggled in ui.ts |
-| L | **Latency overlay** — show estimated inter-region latency as arcs when a region is selected (Cloudping-style) | ⬜ TODO | Need latency data source; draw arcs via ThreeGlobe `.arcsData()`; trigger on region click |
+| L | **Latency overlay** — animated arcs from selected region to all peers, color-coded by estimated RTT | ✅ DONE | Haversine → fiber-speed formula; `showLatencyArcs` / `clearLatencyArcs` in globe.ts; legend in info panel |
 
-## Latency overlay plan
-1. Embed static latency data (JSON keyed by `"region-a → region-b"`) — source from public Cloudping snapshots or hardcode a representative set
-2. On region click, filter latency table for rows matching the selected region
-3. Draw arcs via `globe.arcsData(arcs).arcColor().arcAltitude().arcLabel()` 
-4. Clear arcs when panel is closed or a new region is selected
-5. Show latency value in ms on hover (arcLabel) or in the info panel table
+## All tasks complete ✅
 
 ## Files touched
 - `src/globe.ts` — click handlers, multi-provider colors, flyToRegion, region counts, (TODO: arcs)
