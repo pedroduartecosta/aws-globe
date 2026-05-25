@@ -6,43 +6,47 @@
       "longName": "Johannesburg",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": -26.204103,
-      "lng": 28.047304
+      "lng": 28.047304,
+      "azCount": 3
     },
     {
       "name": "eastasia",
       "longName": "Hong Kong",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 22.396427,
-      "lng": 114.109497
+      "lng": 114.109497,
+      "azCount": 3
     },
     {
       "name": "southeastasia",
       "longName": "Singapore",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 1.13,
-      "lng": 105.3
+      "lng": 105.3,
+      "azCount": 3
     },
     {
       "name": "australiaeast",
       "longName": "New South Wales",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": -31.253218,
-      "lng": 146.921097
+      "lng": 146.921097,
+      "azCount": 3
     },
     {
       "name": "australiasoutheast",
       "longName": "Victoria",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": -37.8142176,
       "lng": 144.9631608
     },
@@ -51,7 +55,7 @@
       "longName": "Canberra",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": -35.2975906,
       "lng": 149.1012676
     },
@@ -60,43 +64,47 @@
       "longName": "Vienna",
       "type": "Region",
       "status": "unavailable",
-      "size": 1.0,
+      "size": 1,
       "lat": 48.599753,
-      "lng": 16.404751
+      "lng": 16.404751,
+      "azCount": 3
     },
     {
       "name": "belgiumcentral",
       "longName": "Brussels",
       "type": "Region",
       "status": "unavailable",
-      "size": 1.0,
+      "size": 1,
       "lat": 51.35,
-      "lng": 5.06
+      "lng": 5.06,
+      "azCount": 3
     },
     {
       "name": "brazilsouth",
-      "longName": "S\u00e3o Paulo State",
+      "longName": "São Paulo State",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": -23.74512587,
-      "lng": -46.66992188
+      "lng": -46.66992188,
+      "azCount": 3
     },
     {
       "name": "canadacentral",
       "longName": "Toronto",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 43.6534817,
-      "lng": -79.3839347
+      "lng": -79.3839347,
+      "azCount": 3
     },
     {
       "name": "canadaeast",
       "longName": "Quebec City",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 46.8259601,
       "lng": -71.2352226
     },
@@ -105,16 +113,17 @@
       "longName": "Santiago",
       "type": "Region",
       "status": "unavailable",
-      "size": 1.0,
+      "size": 1,
       "lat": -33.47,
-      "lng": -70.8
+      "lng": -70.8,
+      "azCount": 3
     },
     {
       "name": "chinaeast",
       "longName": "Shanghai",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 31.2322758,
       "lng": 121.9692071
     },
@@ -123,7 +132,7 @@
       "longName": "Shanghai",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 30.57015912,
       "lng": 119.9265137
     },
@@ -132,7 +141,7 @@
       "longName": "Beijing",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 40.5065084,
       "lng": 116.0912391
     },
@@ -141,7 +150,7 @@
       "longName": "Beijing",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 39.63107677,
       "lng": 118.3976563
     },
@@ -150,7 +159,7 @@
       "longName": "Hebei",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 42.710633,
       "lng": 116.277987
     },
@@ -159,34 +168,37 @@
       "longName": "Copenhagen",
       "type": "Region",
       "status": "unavailable",
-      "size": 1.0,
+      "size": 1,
       "lat": 55.664858,
-      "lng": 12.580776
+      "lng": 12.580776,
+      "azCount": 3
     },
     {
       "name": "northeurope",
       "longName": "Ireland",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 52.865196,
-      "lng": -7.9794599
+      "lng": -7.9794599,
+      "azCount": 3
     },
     {
       "name": "westeurope",
       "longName": "Netherlands",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 52.5001698,
-      "lng": 7.0480821
+      "lng": 7.0480821,
+      "azCount": 3
     },
     {
       "name": "finlandcentral",
       "longName": "Helsinki",
       "type": "Region",
       "status": "unavailable",
-      "size": 1.0,
+      "size": 1,
       "lat": 60.183027,
       "lng": 24.874774
     },
@@ -195,25 +207,27 @@
       "longName": "Paris",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 48.8566969,
-      "lng": 2.3514616
+      "lng": 2.3514616,
+      "azCount": 3
     },
     {
       "name": "germanywestcentral",
       "longName": "Frankfurt",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 50.2106444,
-      "lng": 8.6820917
+      "lng": 8.6820917,
+      "azCount": 3
     },
     {
       "name": "greececentral",
       "longName": "Athens",
       "type": "Region",
       "status": "unavailable",
-      "size": 1.0,
+      "size": 1,
       "lat": 37.9839412,
       "lng": 23.7283052
     },
@@ -222,16 +236,17 @@
       "longName": "Pune",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 18.521428,
-      "lng": 75.0544541
+      "lng": 75.0544541,
+      "azCount": 3
     },
     {
       "name": "southindia",
       "longName": "Chennai",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 13.0836939,
       "lng": 80.270186
     },
@@ -240,7 +255,7 @@
       "longName": "Hyderabad",
       "type": "Region",
       "status": "unavailable",
-      "size": 1.0,
+      "size": 1,
       "lat": 17.34,
       "lng": 78.5
     },
@@ -249,115 +264,127 @@
       "longName": "Jakarta",
       "type": "Region",
       "status": "unavailable",
-      "size": 1.0,
+      "size": 1,
       "lat": -6.1753942,
-      "lng": 106.827183
+      "lng": 106.827183,
+      "azCount": 3
     },
     {
       "name": "israelcentral",
       "longName": "Israel",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 31.5313113,
-      "lng": 35.8667654
+      "lng": 35.8667654,
+      "azCount": 3
     },
     {
       "name": "italynorth",
       "longName": "Milan",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 45.2668,
-      "lng": 9.6905
+      "lng": 9.6905,
+      "azCount": 3
     },
     {
       "name": "japaneast",
       "longName": "Tokyo, Saitama",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 37.6828387,
-      "lng": 139.7594549
+      "lng": 139.7594549,
+      "azCount": 3
     },
     {
       "name": "japanwest",
       "longName": "Osaka",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 34.6198813,
-      "lng": 135.490357
+      "lng": 135.490357,
+      "azCount": 3
     },
     {
       "name": "koreacentral",
       "longName": "Seoul",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 37.5666791,
-      "lng": 126.9782914
+      "lng": 126.9782914,
+      "azCount": 3
     },
     {
       "name": "malaysiawest",
       "longName": "Kuala Lumpur",
       "type": "Region",
       "status": "unavailable",
-      "size": 1.0,
+      "size": 1,
       "lat": 4.55035,
-      "lng": 101.809256
+      "lng": 101.809256,
+      "azCount": 3
     },
     {
       "name": "mexicocentral",
-      "longName": "Quer\u00e9taro State",
+      "longName": "Querétaro State",
       "type": "Region",
       "status": "unavailable",
-      "size": 1.0,
+      "size": 1,
       "lat": 20.8542575,
-      "lng": -99.84756
+      "lng": -99.84756,
+      "azCount": 3
     },
     {
       "name": "newzealandnorth",
       "longName": "Auckland",
       "type": "Region",
       "status": "unavailable",
-      "size": 1.0,
+      "size": 1,
       "lat": -36.852095,
-      "lng": 174.7631803
+      "lng": 174.7631803,
+      "azCount": 3
     },
     {
       "name": "norwayeast",
       "longName": "Oslo",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 59.9133301,
-      "lng": 10.7389701
+      "lng": 10.7389701,
+      "azCount": 3
     },
     {
       "name": "polandcentral",
       "longName": "Warsaw",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 52.2319581,
-      "lng": 21.8067249
+      "lng": 21.8067249,
+      "azCount": 3
     },
     {
       "name": "qatarcentral",
       "longName": "Doha",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 26.2856329,
-      "lng": 51.5264162
+      "lng": 51.5264162,
+      "azCount": 3
     },
     {
       "name": "saudiarabiacentral",
       "longName": "Riyadh",
       "type": "Region",
       "status": "unavailable",
-      "size": 1.0,
+      "size": 1,
       "lat": 24.7136,
       "lng": 46.6753
     },
@@ -366,34 +393,37 @@
       "longName": "Madrid",
       "type": "Region",
       "status": "unavailable",
-      "size": 1.0,
+      "size": 1,
       "lat": 40.4167047,
-      "lng": -3.7035825
+      "lng": -3.7035825,
+      "azCount": 3
     },
     {
       "name": "swedencentral",
-      "longName": "G\u00e4vle and Sandviken",
+      "longName": "Gävle and Sandviken",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 60.667761,
-      "lng": 17.138836
+      "lng": 17.138836,
+      "azCount": 3
     },
     {
       "name": "switzerlandnorth",
-      "longName": "Z\u00fcrich",
+      "longName": "Zürich",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 47.2744489,
-      "lng": 8.8410422
+      "lng": 8.8410422,
+      "azCount": 3
     },
     {
       "name": "taiwannorth",
       "longName": "Taipei",
       "type": "Region",
       "status": "unavailable",
-      "size": 1.0,
+      "size": 1,
       "lat": 25.039666,
       "lng": 121.4139
     },
@@ -402,25 +432,27 @@
       "longName": "Dubai",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 25.2047397,
-      "lng": 55.2707065
+      "lng": 55.2707065,
+      "azCount": 3
     },
     {
       "name": "uksouth",
       "longName": "London",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 51.5073219,
-      "lng": -0.1276474
+      "lng": -0.1276474,
+      "azCount": 3
     },
     {
       "name": "ukwest",
       "longName": "Cardiff",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 51.4816546,
       "lng": -3.1791934
     },
@@ -429,34 +461,37 @@
       "longName": "Iowa",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 41.4509614,
-      "lng": -94.55932617
+      "lng": -94.55932617,
+      "azCount": 3
     },
     {
       "name": "eastus",
       "longName": "Virginia",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 38.75408328,
-      "lng": -78.13476563
+      "lng": -78.13476563,
+      "azCount": 3
     },
     {
       "name": "eastus2",
       "longName": "Virginia",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 36.66841892,
-      "lng": -81.12304688
+      "lng": -81.12304688,
+      "azCount": 3
     },
     {
       "name": "eastus3",
       "longName": "Georgia",
       "type": "Region",
       "status": "unavailable",
-      "size": 1.0,
+      "size": 1,
       "lat": 32.840464,
       "lng": -83.716858
     },
@@ -465,7 +500,7 @@
       "longName": "Illinois",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 40.0796606,
       "lng": -89.4337288
     },
@@ -474,16 +509,17 @@
       "longName": "Texas",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 29.55434513,
-      "lng": -96.87744141
+      "lng": -96.87744141,
+      "azCount": 3
     },
     {
       "name": "westcentralus",
       "longName": "Wyoming",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 43.1700264,
       "lng": -107.568534
     },
@@ -492,7 +528,7 @@
       "longName": "California",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 36.7014631,
       "lng": -118.755997
     },
@@ -501,18 +537,20 @@
       "longName": "Washington",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 47.2868352,
-      "lng": -120.212613
+      "lng": -120.212613,
+      "azCount": 3
     },
     {
       "name": "westus3",
       "longName": "Arizona",
       "type": "Region",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 34.395342,
-      "lng": -111.763275
+      "lng": -111.763275,
+      "azCount": 3
     },
     {
       "name": "atlanta",
@@ -1191,7 +1229,7 @@
     },
     {
       "name": "GRU",
-      "longName": "S\u00e3o Paulo",
+      "longName": "São Paulo",
       "type": "PoP",
       "status": "available",
       "size": 0.2,
@@ -1209,7 +1247,7 @@
     },
     {
       "name": "UDI50",
-      "longName": "Uberl\u00e2ndia",
+      "longName": "Uberlândia",
       "type": "PoP",
       "status": "available",
       "size": 0.2,
@@ -1677,7 +1715,7 @@
     },
     {
       "name": "MEX30",
-      "longName": "Municipio El Marqu\u00e9s",
+      "longName": "Municipio El Marqués",
       "type": "PoP",
       "status": "available",
       "size": 0.2,

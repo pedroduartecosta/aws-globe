@@ -6,36 +6,58 @@
       "longName": "Germany",
       "type": "Region",
       "status": "unavailable",
-      "size": 1.0,
+      "size": 1,
       "lat": 51.222354333739005,
       "lng": 10.319348079866192
+    },
+    {
+      "name": "chile",
+      "longName": "Chile",
+      "type": "Region",
+      "status": "unavailable",
+      "size": 1,
+      "lat": -33.4489,
+      "lng": -70.6693
+    },
+    {
+      "name": "me-central-2",
+      "longName": "Riyadh",
+      "type": "Region",
+      "status": "available",
+      "size": 2.0,
+      "lat": 24.7136,
+      "lng": 46.6753,
+      "azCount": 3
     },
     {
       "name": "ap-southeast-7",
       "longName": "Thailand",
       "type": "Region",
       "status": "available",
-      "size": 2.0,
+      "size": 2,
       "lat": 13.7563,
-      "lng": 100.5018
+      "lng": 100.5018,
+      "azCount": 3
     },
     {
       "name": "ap-southeast-6",
       "longName": "New Zealand",
       "type": "Region",
       "status": "available",
-      "size": 2.0,
+      "size": 2,
       "lat": -36.8485,
-      "lng": 174.7633
+      "lng": 174.7633,
+      "azCount": 3
     },
     {
       "name": "ap-southeast-5",
       "longName": "Malaysia",
       "type": "Region",
       "status": "available",
-      "size": 2.0,
+      "size": 2,
       "lat": 3.1478,
-      "lng": 101.6953
+      "lng": 101.6953,
+      "azCount": 3
     },
     {
       "name": "af-south-1",
@@ -44,16 +66,18 @@
       "status": "available",
       "size": 2.31,
       "lat": -33.928992,
-      "lng": 18.417396
+      "lng": 18.417396,
+      "azCount": 3
     },
     {
       "name": "ap-east-2",
       "longName": "Taipei",
       "type": "Region",
       "status": "available",
-      "size": 2.0,
+      "size": 2,
       "lat": 25.0375,
-      "lng": 121.5636
+      "lng": 121.5636,
+      "azCount": 3
     },
     {
       "name": "ap-east-1",
@@ -62,7 +86,8 @@
       "status": "available",
       "size": 2.33,
       "lat": 22.350627,
-      "lng": 114.1849161
+      "lng": 114.1849161,
+      "azCount": 3
     },
     {
       "name": "ap-northeast-1",
@@ -71,7 +96,8 @@
       "status": "available",
       "size": 2.16,
       "lat": 35.6821936,
-      "lng": 139.762221
+      "lng": 139.762221,
+      "azCount": 4
     },
     {
       "name": "ap-northeast-2",
@@ -80,7 +106,8 @@
       "status": "available",
       "size": 2.09,
       "lat": 37.5666791,
-      "lng": 126.9782914
+      "lng": 126.9782914,
+      "azCount": 4
     },
     {
       "name": "ap-northeast-3",
@@ -89,7 +116,8 @@
       "status": "available",
       "size": 2.16,
       "lat": 34.6198813,
-      "lng": 135.490357
+      "lng": 135.490357,
+      "azCount": 3
     },
     {
       "name": "ap-south-1",
@@ -98,7 +126,8 @@
       "status": "available",
       "size": 1.75,
       "lat": 19.0785451,
-      "lng": 72.878176
+      "lng": 72.878176,
+      "azCount": 3
     },
     {
       "name": "ap-south-2",
@@ -107,7 +136,8 @@
       "status": "available",
       "size": 1.75,
       "lat": 17.360589,
-      "lng": 78.4740613
+      "lng": 78.4740613,
+      "azCount": 3
     },
     {
       "name": "ap-southeast-1",
@@ -116,7 +146,8 @@
       "status": "available",
       "size": 2.12,
       "lat": 1.357107,
-      "lng": 103.8194992
+      "lng": 103.8194992,
+      "azCount": 3
     },
     {
       "name": "ap-southeast-2",
@@ -125,7 +156,8 @@
       "status": "available",
       "size": 2.15,
       "lat": -33.8698439,
-      "lng": 151.2082848
+      "lng": 151.2082848,
+      "azCount": 3
     },
     {
       "name": "ap-southeast-3",
@@ -134,7 +166,8 @@
       "status": "available",
       "size": 2.12,
       "lat": -6.175247,
-      "lng": 106.8270488
+      "lng": 106.8270488,
+      "azCount": 3
     },
     {
       "name": "ap-southeast-4",
@@ -143,7 +176,8 @@
       "status": "available",
       "size": 2.15,
       "lat": -37.8142454,
-      "lng": 144.9631732
+      "lng": 144.9631732,
+      "azCount": 3
     },
     {
       "name": "ca-central-1",
@@ -152,7 +186,8 @@
       "status": "available",
       "size": 1.93,
       "lat": 45.5019,
-      "lng": -73.5674
+      "lng": -73.5674,
+      "azCount": 3
     },
     {
       "name": "ca-west-1",
@@ -161,7 +196,8 @@
       "status": "available",
       "size": 1.93,
       "lat": 51.0456064,
-      "lng": -114.057541
+      "lng": -114.057541,
+      "azCount": 3
     },
     {
       "name": "eu-central-1",
@@ -170,7 +206,8 @@
       "status": "available",
       "size": 2.08,
       "lat": 50.1106444,
-      "lng": 8.6820917
+      "lng": 8.6820917,
+      "azCount": 3
     },
     {
       "name": "eu-central-2",
@@ -179,7 +216,8 @@
       "status": "available",
       "size": 2.29,
       "lat": 47.3744489,
-      "lng": 8.5410422
+      "lng": 8.5410422,
+      "azCount": 3
     },
     {
       "name": "eu-north-1",
@@ -188,7 +226,8 @@
       "status": "available",
       "size": 1.85,
       "lat": 59.3251172,
-      "lng": 18.0710935
+      "lng": 18.0710935,
+      "azCount": 3
     },
     {
       "name": "eu-south-1",
@@ -197,7 +236,8 @@
       "status": "available",
       "size": 2.04,
       "lat": 45.4641943,
-      "lng": 9.1896346
+      "lng": 9.1896346,
+      "azCount": 3
     },
     {
       "name": "eu-south-2",
@@ -206,7 +246,8 @@
       "status": "available",
       "size": 1.95,
       "lat": 39.3260685,
-      "lng": -4.8379791
+      "lng": -4.8379791,
+      "azCount": 3
     },
     {
       "name": "eu-west-1",
@@ -215,7 +256,8 @@
       "status": "available",
       "size": 1.95,
       "lat": 52.865196,
-      "lng": -7.9794599
+      "lng": -7.9794599,
+      "azCount": 3
     },
     {
       "name": "eu-west-2",
@@ -224,7 +266,8 @@
       "status": "available",
       "size": 2.04,
       "lat": 51.5074456,
-      "lng": -0.1277653
+      "lng": -0.1277653,
+      "azCount": 3
     },
     {
       "name": "eu-west-3",
@@ -233,7 +276,8 @@
       "status": "available",
       "size": 2.04,
       "lat": 48.8588897,
-      "lng": 2.3200410217200766
+      "lng": 2.3200410217200766,
+      "azCount": 3
     },
     {
       "name": "il-central-1",
@@ -242,7 +286,8 @@
       "status": "available",
       "size": 2.04,
       "lat": 32.0852997,
-      "lng": 34.7818064
+      "lng": 34.7818064,
+      "azCount": 3
     },
     {
       "name": "me-central-1",
@@ -251,7 +296,8 @@
       "status": "available",
       "size": 2.14,
       "lat": 24.0002488,
-      "lng": 53.9994829
+      "lng": 53.9994829,
+      "azCount": 3
     },
     {
       "name": "me-south-1",
@@ -260,16 +306,18 @@
       "status": "available",
       "size": 2.14,
       "lat": 26.2235,
-      "lng": 50.5822
+      "lng": 50.5822,
+      "azCount": 3
     },
     {
       "name": "mx-central-1",
       "longName": "Mexico",
       "type": "Region",
       "status": "available",
-      "size": 2.0,
+      "size": 2,
       "lat": 19.4326,
-      "lng": -99.1332
+      "lng": -99.1332,
+      "azCount": 3
     },
     {
       "name": "sa-east-1",
@@ -278,7 +326,8 @@
       "status": "available",
       "size": 2.77,
       "lat": -23.5506507,
-      "lng": -46.6333824
+      "lng": -46.6333824,
+      "azCount": 3
     },
     {
       "name": "us-east-1",
@@ -287,7 +336,8 @@
       "status": "available",
       "size": 1.74,
       "lat": 39.0437,
-      "lng": -77.4875
+      "lng": -77.4875,
+      "azCount": 6
     },
     {
       "name": "us-east-2",
@@ -296,14 +346,15 @@
       "status": "available",
       "size": 1.74,
       "lat": 40.2253569,
-      "lng": -82.6881395
+      "lng": -82.6881395,
+      "azCount": 3
     },
     {
       "name": "us-east-1-mci-1",
       "longName": "Kansas City",
       "type": "Local Zone",
       "status": "available",
-      "size": 1.0,
+      "size": 1,
       "lat": 39.100105,
       "lng": -94.5781416
     },
@@ -314,7 +365,8 @@
       "status": "available",
       "size": 2.13,
       "lat": 38.5265037,
-      "lng": -110.9958199
+      "lng": -110.9958199,
+      "azCount": 3
     },
     {
       "name": "us-gov-west-1",
@@ -323,16 +375,18 @@
       "status": "available",
       "size": 2.13,
       "lat": 47.213055,
-      "lng": -122.44758931093395
+      "lng": -122.44758931093395,
+      "azCount": 3
     },
     {
       "name": "us-west-1",
       "longName": "N. California",
       "type": "Region",
       "status": "available",
-      "size": 2.0,
+      "size": 2,
       "lat": 34.2366266,
-      "lng": -117.2037028
+      "lng": -117.2037028,
+      "azCount": 3
     },
     {
       "name": "us-west-2",
@@ -341,7 +395,8 @@
       "status": "available",
       "size": 1.74,
       "lat": 43.9792797,
-      "lng": -120.737257
+      "lng": -120.737257,
+      "azCount": 4
     },
     {
       "name": "af-south-1-los-1",
@@ -561,7 +616,7 @@
     },
     {
       "name": "us-east-1-qro-1",
-      "longName": "Quer\u00e9taro",
+      "longName": "Querétaro",
       "type": "Local Zone",
       "status": "available",
       "size": 0.5,
@@ -723,7 +778,7 @@
     },
     {
       "name": "GRU1-P3",
-      "longName": "S\u00e3o Paulo",
+      "longName": "São Paulo",
       "type": "PoP",
       "status": "available",
       "size": 0.3,
@@ -741,7 +796,7 @@
     },
     {
       "name": "YUL62-C1",
-      "longName": "Montr\u00e9al, QC",
+      "longName": "Montréal, QC",
       "type": "PoP",
       "status": "available",
       "size": 0.3,
@@ -831,7 +886,7 @@
     },
     {
       "name": "BOG50-P1",
-      "longName": "Bogot\u00e1",
+      "longName": "Bogotá",
       "type": "PoP",
       "status": "available",
       "size": 0.3,
@@ -903,7 +958,7 @@
     },
     {
       "name": "DUS51-P2",
-      "longName": "D\u00fcsseldorf",
+      "longName": "Düsseldorf",
       "type": "PoP",
       "status": "available",
       "size": 0.3,
@@ -1110,7 +1165,7 @@
     },
     {
       "name": "QRO50-P2",
-      "longName": "Quer\u00e9taro",
+      "longName": "Querétaro",
       "type": "PoP",
       "status": "available",
       "size": 0.3,
@@ -1272,7 +1327,7 @@
     },
     {
       "name": "ZRH50-C1",
-      "longName": "Z\u00fcrich",
+      "longName": "Zürich",
       "type": "PoP",
       "status": "available",
       "size": 0.3,

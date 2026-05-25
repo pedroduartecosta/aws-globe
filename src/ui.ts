@@ -18,9 +18,12 @@ export function initUI(): void {
     toggleAllProviderLegend(value === 'all');
   });
 
-  document.getElementById('nameDisplaySelect')!.addEventListener('change', () => {
-    state.isLongName = !state.isLongName;
+  document.getElementById('nameDisplayCheckbox')!.addEventListener('change', e => {
+    const checked = (e.target as HTMLInputElement).checked;
+    state.isLongName = !checked;
     globe.updateActiveGlobe();
+    document.getElementById('nameOptLong')!.classList.toggle('active', !checked);
+    document.getElementById('nameOptCode')!.classList.toggle('active', checked);
   });
 
   document.getElementById('localZonesCheckbox')!.addEventListener('change', () => {
@@ -84,7 +87,9 @@ export function initUI(): void {
         r => `<div class="search-result-item" data-lat="${r.lat}" data-lng="${r.lng}"
           data-provider="${r.provider}">
           <span class="search-dot" style="background:${providerBadgeColor(r.provider)}"></span>
-          ${r.longName} <span class="search-code">${r.name}</span>
+          ${r.longName}
+          ${r.azCount ? `<span class="search-az">${r.azCount} AZ</span>` : ''}
+          <span class="search-code">${r.name}</span>
         </div>`,
       )
       .join('');
@@ -122,6 +127,13 @@ function showInfoPanel(region: Region, provider: Provider): void {
   document.getElementById('infoPanelCode')!.textContent = region.name;
   document.getElementById('infoPanelType')!.textContent = region.type;
   document.getElementById('infoPanelStatus')!.textContent = region.status;
+  const azRow = document.getElementById('infoPanelAzRow') as HTMLTableRowElement;
+  if (region.azCount) {
+    document.getElementById('infoPanelAz')!.textContent = `${region.azCount}`;
+    azRow.style.display = '';
+  } else {
+    azRow.style.display = 'none';
+  }
   const link = document.getElementById('infoPanelLink') as HTMLAnchorElement;
   link.href = PROVIDER_DOC_LINKS[provider](region.name);
   panel.style.display = 'block';
@@ -136,9 +148,8 @@ function toggleAllProviderLegend(show: boolean): void {
   const singleLegend = document.getElementById('singleProviderLegend')!;
   legend.style.display = show ? 'block' : 'none';
   singleLegend.style.display = show ? 'none' : 'block';
-  // hide controls that don't apply in all-providers mode
   const nameDisplay = document.getElementById('nameDisplayToggle') as HTMLElement;
-  if (nameDisplay) nameDisplay.style.display = show ? 'none' : 'flex';
+  if (nameDisplay) nameDisplay.style.display = show ? 'none' : 'block';
 }
 
 function updateStats(): void {
@@ -161,5 +172,7 @@ function resetCheckboxes(): void {
   (document.getElementById('localZonesCheckbox') as HTMLInputElement).checked = false;
   (document.getElementById('popCheckbox') as HTMLInputElement).checked = false;
   (document.getElementById('cables') as HTMLInputElement).checked = false;
-  (document.getElementById('nameDisplaySelect') as HTMLSelectElement).value = 'longName';
+  (document.getElementById('nameDisplayCheckbox') as HTMLInputElement).checked = false;
+  document.getElementById('nameOptLong')!.classList.add('active');
+  document.getElementById('nameOptCode')!.classList.remove('active');
 }

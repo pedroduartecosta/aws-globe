@@ -9,6 +9,7 @@ export interface Region {
   lng: number;
   type: RegionType;
   status: RegionStatus;
+  azCount?: number;
 }
 
 export interface RegionsCollection {
