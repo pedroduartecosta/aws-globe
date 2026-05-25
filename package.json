@@ -17,6 +17,9 @@
   ],
   "author": "Zhanarbek Osmonaliev",
   "license": "ISC",
+  "engines": {
+    "node": "20.x"
+  },
   "dependencies": {
     "satellite.js": "^7.0.1",
     "three": "^0.160.1",
