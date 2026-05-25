@@ -30,7 +30,13 @@ const config = {
 
 if (isDev) {
   const ctx = await esbuild.context(config);
-  const { port } = await ctx.serve({ servedir: "dist", port: 8080 });
+  // Try preferred port, fall back to any free port if it's in use
+  let port;
+  try {
+    ({ port } = await ctx.serve({ servedir: "dist", port: 8080 }));
+  } catch {
+    ({ port } = await ctx.serve({ servedir: "dist", port: 0 }));
+  }
   await ctx.watch();
   console.log(`\nDev server: http://localhost:${port}\n`);
 } else {
