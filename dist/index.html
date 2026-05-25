@@ -117,6 +117,58 @@
         align-items: center;
       }
 
+      .search-result-item {
+        padding: 8px 12px;
+        cursor: pointer;
+        font-family: "Helvetica";
+        font-size: 13px;
+        color: #f1f3f3;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border-bottom: 1px solid #2a3748;
+      }
+
+      .search-result-item:last-child {
+        border-bottom: none;
+      }
+
+      .search-result-item:hover {
+        background: #2a3748;
+      }
+
+      .search-dot {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+
+      .search-code {
+        color: #8894a6;
+        font-size: 11px;
+        margin-left: auto;
+      }
+
+      .legend-dot {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        margin-right: 6px;
+      }
+
+      .legend-row {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        padding: 2px 0;
+        font-family: "Helvetica";
+      }
+
       .logo {
         position: absolute;
         width: 100px;
@@ -174,6 +226,48 @@
   <body>
     <header>
       <h1>Cloud Global Infrastructure</h1>
+      <div id="searchWrapper" style="position:relative; padding: 0.5rem 1rem;">
+        <input
+          id="regionSearch"
+          type="text"
+          placeholder="Search region..."
+          autocomplete="off"
+          style="
+            padding: 6px 12px;
+            font-size: 14px;
+            border: none;
+            background-color: #2a3748;
+            color: #f1f3f3;
+            border-radius: 4px;
+            width: 200px;
+            outline: none;
+          "
+        />
+        <div
+          id="searchResults"
+          style="
+            display: none;
+            position: absolute;
+            top: calc(100% + 2px);
+            left: 1rem;
+            background: #1c2026;
+            border: 1px solid #2a3748;
+            border-radius: 4px;
+            z-index: 10;
+            width: 260px;
+            max-height: 260px;
+            overflow-y: auto;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+          "
+        ></div>
+      </div>
+      <div id="regionStats" style="
+        color: #f1f3f3;
+        font-family: Helvetica;
+        font-size: 13px;
+        padding: 0 1rem;
+        white-space: nowrap;
+      "></div>
     </header>
 
     <footer>
@@ -186,8 +280,9 @@
           <label for="cloudProviderSelect"></label>
           <select id="cloudProviderSelect">
             <option value="aws">AWS</option>
-            <option value="google">Google</option>
+            <option value="google">Google Cloud</option>
             <option value="azure">Azure</option>
+            <option value="all">All Providers</option>
           </select>
         </div>
 
@@ -200,15 +295,40 @@
           </select>
         </div>
 
+        <!-- All-providers legend (hidden by default) -->
+        <div id="allProviderLegend" style="display:none; width:100%;">
+          <div class="legend-row">
+            <span class="legend-dot" style="background:#FF9900"></span>
+            <p style="color:#FF9900; margin:3px 0;">AWS</p>
+          </div>
+          <div class="legend-row">
+            <span class="legend-dot" style="background:#4285F4"></span>
+            <p style="color:#4285F4; margin:3px 0;">Google Cloud</p>
+          </div>
+          <div class="legend-row">
+            <span class="legend-dot" style="background:#0078d4"></span>
+            <p style="color:#0078d4; margin:3px 0;">Azure</p>
+          </div>
+          <div class="legend-row">
+            <span class="legend-dot" style="background:#666"></span>
+            <p style="color:#888; margin:3px 0;">Announced / Unavailable</p>
+          </div>
+        </div>
+
+        <!-- Single-provider legend -->
+        <div id="singleProviderLegend" style="width:100%;">
         <div id="localZonesToggle" class="checkbox-label">
+          <span class="legend-dot" style="background:#8894a6"></span>
           <p style="color: #8894a6; margin: 5px">Submarine Cables</p>
           <input type="checkbox" id="cables" class="checkbox-input" />
         </div>
         <div id="localZonesToggle" class="checkbox-label">
+          <span class="legend-dot" style="background:#337aff"></span>
           <p style="color: #337aff; margin: 5px">PoPs</p>
           <input type="checkbox" id="popCheckbox" class="checkbox-input" />
         </div>
         <div id="localZonesToggle" class="checkbox-label">
+          <span class="legend-dot" style="background:#ffee53"></span>
           <p style="color: #ffee53; margin: 5px">Local Zones</p>
           <input
             type="checkbox"
@@ -216,8 +336,15 @@
             class="checkbox-input"
           />
         </div>
-        <p style="color: #f1f3f3; margin-top: 5px">Available Regions</p>
-        <p style="color: #ff6633">New Announced Regions</p>
+        <div class="legend-row">
+          <span class="legend-dot" style="background:#f1f3f3"></span>
+          <p style="color: #f1f3f3; margin-top: 5px">Available Regions</p>
+        </div>
+        <div class="legend-row">
+          <span class="legend-dot" style="background:#ff6633"></span>
+          <p style="color: #ff6633; margin: 0">Announced / Unavailable</p>
+        </div>
+        </div><!-- end singleProviderLegend -->
       </small>
     </footer>
 
@@ -230,7 +357,62 @@
       /></a>
     </div>
 
-    <script src="//unpkg.com/satellite.js/dist/satellite.min.js"></script>
+    <!-- Region info panel -->
+    <div id="infoPanel" style="
+      display: none;
+      position: fixed;
+      top: 70px;
+      left: 20px;
+      background: #1c2026;
+      border: 1px solid #2a3748;
+      border-radius: 8px;
+      padding: 16px;
+      width: 240px;
+      z-index: 10;
+      font-family: Helvetica;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.6);
+      color: #f1f3f3;
+    ">
+      <button id="infoPanelClose" style="
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        background: none;
+        border: none;
+        color: #8894a6;
+        font-size: 16px;
+        cursor: pointer;
+        line-height: 1;
+      ">✕</button>
+      <div style="font-size: 11px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase;" id="infoPanelProvider"></div>
+      <div style="font-size: 16px; font-weight: bold; margin: 6px 0 2px;" id="infoPanelName"></div>
+      <div style="font-size: 12px; color: #8894a6; margin-bottom: 10px;" id="infoPanelCode"></div>
+      <table style="width:100%; font-size: 12px; border-collapse: collapse;">
+        <tr>
+          <td style="color:#8894a6; padding: 3px 0;">Type</td>
+          <td id="infoPanelType" style="text-align:right;"></td>
+        </tr>
+        <tr>
+          <td style="color:#8894a6; padding: 3px 0;">Status</td>
+          <td id="infoPanelStatus" style="text-align:right;"></td>
+        </tr>
+        <tr>
+          <td style="color:#8894a6; padding: 3px 0;">Coordinates</td>
+          <td id="infoPanelCoords" style="text-align:right;"></td>
+        </tr>
+      </table>
+      <a id="infoPanelLink" href="#" target="_blank" rel="noopener" style="
+        display: block;
+        margin-top: 12px;
+        text-align: center;
+        padding: 6px;
+        background: #2a3748;
+        border-radius: 4px;
+        color: #f1f3f3;
+        text-decoration: none;
+        font-size: 12px;
+      ">View provider docs ↗</a>
+    </div>
 
     <script src="./main.js"></script>
   </body>

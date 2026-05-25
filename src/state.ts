@@ -1,4 +1,4 @@
-import type { Provider, CablePath, CableCollection } from './types';
+import type { Provider, CablePath, CableCollection, Region } from './types';
 import cableDataJson from './files/globe-cables-data.json';
 
 export const state = {
@@ -7,6 +7,8 @@ export const state = {
   showLocalZones: false,
   showPoPs: false,
   showCables: false,
+  showAllProviders: false,
+  selectedRegion: null as (Region & { provider: Provider }) | null,
 };
 
 const cableData = cableDataJson as unknown as CableCollection;

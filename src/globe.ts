@@ -7,7 +7,7 @@ import googleRegionsData from './files/regions-data-google.json';
 import azureRegionsData from './files/regions-data-azure.json';
 import labelfont from '../assets/src/files/helvetiker_bold.typeface.json';
 import tleData from './data/satellites-tle';
-import { scene } from './scene';
+import { scene, camera, controls } from './scene';
 import { state, cablePaths } from './state';
 import type { Region, RegionsCollection, Provider } from './types';
 
@@ -28,11 +28,30 @@ const providerData: Record<Provider, RegionsCollection> = {
   Azure: azureRegionsData as unknown as RegionsCollection,
 };
 
+const PROVIDER_COLORS: Record<Provider, string> = {
+  AWS: '#FF9900',
+  Google: '#4285F4',
+  Azure: '#0078d4',
+};
+
+let onRegionClick: ((region: Region, provider: Provider) => void) | null = null;
+
+export function setOnRegionClick(fn: (region: Region, provider: Provider) => void): void {
+  onRegionClick = fn;
+}
+
 function regionColor(e: Region): string {
   if (e.type === 'Region') return e.status === 'available' ? '#f1f3f3' : '#ff6633';
   if (e.type === 'Local Zone') return '#ffee53';
   if (e.type === 'PoP') return '#337aff';
   return '#ff6633';
+}
+
+function regionColorForProvider(provider: Provider) {
+  return (e: Region): string => {
+    if (e.status !== 'available') return '#666666';
+    return PROVIDER_COLORS[provider];
+  };
 }
 
 function regionDotRadius(e: Region): number {
@@ -65,27 +84,28 @@ function filterRegions(regions: Region[]): Region[] {
   );
 }
 
-export function updateGlobe(globe: AnyGlobe, regionsData: RegionsCollection): void {
+export function updateGlobe(globe: AnyGlobe, regionsData: RegionsCollection, provider?: Provider): void {
   const filtered = filterRegions(regionsData.regions);
   const labeled = filtered.map(e => ({ ...e, name: state.isLongName ? e.longName : e.name }));
+  const colorFn = state.showAllProviders && provider ? regionColorForProvider(provider) : regionColor;
 
   globe
     .labelsData(labeled)
     .labelsTransitionDuration(0)
-    .labelColor(regionColor)
+    .labelColor(colorFn)
     .labelDotRadius(regionDotRadius)
-    .labelSize(regionLabelSize)
-    .labelText((e: Region) => (state.isLongName ? e.longName : e.name))
+    .labelSize(state.showAllProviders ? 0 : regionLabelSize)
+    .labelText((e: Region) => (state.showAllProviders ? '' : state.isLongName ? e.longName : e.name))
     .labelResolution(6)
     .labelAltitude(regionAltitude)
     .labelDotOrientation((e: Region) => (e.type === 'Region' ? 'right' : 'left'))
     .labelTypeFace(labelfont)
     .pointsData(filtered.filter(e => e.type === 'Region'))
-    .pointColor(regionColor)
+    .pointColor(colorFn)
     .pointsMerge(true)
     .pointAltitude(0)
     .pointRadius(0.05)
-    .pathsData(state.showCables ? cablePaths : []);
+    .pathsData(state.showCables && !state.showAllProviders ? cablePaths : []);
 }
 
 function initSatellites(globe: AnyGlobe): void {
@@ -118,7 +138,7 @@ function initSatellites(globe: AnyGlobe): void {
   })();
 }
 
-function buildGlobe(regionsData: RegionsCollection): AnyGlobe {
+function buildGlobe(regionsData: RegionsCollection, provider: Provider): AnyGlobe {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const globe = new ThreeGlobe({ waitForGlobeReady: true, animateIn: true }) as any;
 
@@ -142,9 +162,12 @@ function buildGlobe(regionsData: RegionsCollection): AnyGlobe {
     .pathDashGap(0.008)
     .pathDashAnimateTime(24000)
     .pathPointLat((p: number[]) => p[1])
-    .pathPointLng((p: number[]) => p[0]);
+    .pathPointLng((p: number[]) => p[0])
+    .onLabelClick((region: Region) => {
+      if (onRegionClick) onRegionClick(region, provider);
+    });
 
-  updateGlobe(globe, regionsData);
+  updateGlobe(globe, regionsData, provider);
   initSatellites(globe);
 
   const mat = globe.globeMaterial();
@@ -159,9 +182,9 @@ function buildGlobe(regionsData: RegionsCollection): AnyGlobe {
 export function initGlobes(): void {
   if (GlobeRegionsAWS) return;
 
-  GlobeRegionsAWS = buildGlobe(providerData.AWS);
-  GlobeRegionsGoogle = buildGlobe(providerData.Google);
-  GlobeRegionsAzure = buildGlobe(providerData.Azure);
+  GlobeRegionsAWS = buildGlobe(providerData.AWS, 'AWS');
+  GlobeRegionsGoogle = buildGlobe(providerData.Google, 'Google');
+  GlobeRegionsAzure = buildGlobe(providerData.Azure, 'Azure');
 
   scene.add(GlobeRegionsAWS);
 }
@@ -171,24 +194,42 @@ export function loadProviderData(provider: string): void {
   state.showLocalZones = false;
   state.showPoPs = false;
   state.showCables = false;
+  state.showAllProviders = false;
 
   scene.remove(GlobeRegionsAWS);
   scene.remove(GlobeRegionsGoogle);
   scene.remove(GlobeRegionsAzure);
 
-  if (provider === 'aws') {
+  if (provider === 'all') {
+    state.showAllProviders = true;
+    scene.add(GlobeRegionsAWS);
+    scene.add(GlobeRegionsGoogle);
+    scene.add(GlobeRegionsAzure);
+    updateGlobe(GlobeRegionsAWS, providerData.AWS, 'AWS');
+    updateGlobe(GlobeRegionsGoogle, providerData.Google, 'Google');
+    updateGlobe(GlobeRegionsAzure, providerData.Azure, 'Azure');
+  } else if (provider === 'aws') {
     scene.add(GlobeRegionsAWS);
     state.selectedProvider = 'AWS';
+    updateGlobe(GlobeRegionsAWS, providerData.AWS, 'AWS');
   } else if (provider === 'google') {
     scene.add(GlobeRegionsGoogle);
     state.selectedProvider = 'Google';
+    updateGlobe(GlobeRegionsGoogle, providerData.Google, 'Google');
   } else if (provider === 'azure') {
     scene.add(GlobeRegionsAzure);
     state.selectedProvider = 'Azure';
+    updateGlobe(GlobeRegionsAzure, providerData.Azure, 'Azure');
   }
 }
 
 export function updateActiveGlobe(): void {
+  if (state.showAllProviders) {
+    updateGlobe(GlobeRegionsAWS, providerData.AWS, 'AWS');
+    updateGlobe(GlobeRegionsGoogle, providerData.Google, 'Google');
+    updateGlobe(GlobeRegionsAzure, providerData.Azure, 'Azure');
+    return;
+  }
   const globe =
     state.selectedProvider === 'AWS'
       ? GlobeRegionsAWS
@@ -196,5 +237,50 @@ export function updateActiveGlobe(): void {
         ? GlobeRegionsGoogle
         : GlobeRegionsAzure;
 
-  updateGlobe(globe, providerData[state.selectedProvider]);
+  updateGlobe(globe, providerData[state.selectedProvider], state.selectedProvider);
+}
+
+export function getAllRegions(): Array<Region & { provider: Provider }> {
+  const providers: Provider[] = state.showAllProviders
+    ? ['AWS', 'Google', 'Azure']
+    : [state.selectedProvider];
+
+  return providers.flatMap(p =>
+    filterRegions(providerData[p].regions).map(r => ({ ...r, provider: p })),
+  );
+}
+
+export function getRegionCounts(): Record<Provider, number> {
+  return {
+    AWS: filterRegions(providerData.AWS.regions).filter(r => r.type === 'Region').length,
+    Google: filterRegions(providerData.Google.regions).filter(r => r.type === 'Region').length,
+    Azure: filterRegions(providerData.Azure.regions).filter(r => r.type === 'Region').length,
+  };
+}
+
+export function flyToRegion(lat: number, lng: number): void {
+  const phi = ((90 - lat) * Math.PI) / 180;
+  const theta = ((lng + 180) * Math.PI) / 180;
+  const distance = 220;
+
+  const targetX = -distance * Math.sin(phi) * Math.cos(theta);
+  const targetY = distance * Math.cos(phi);
+  const targetZ = distance * Math.sin(phi) * Math.sin(theta);
+
+  const startPos = { x: camera.position.x, y: camera.position.y, z: camera.position.z };
+  const endPos = { x: targetX, y: targetY, z: targetZ };
+  const duration = 1200;
+  const startTime = Date.now();
+
+  controls.autoRotate = false;
+
+  (function animateCamera() {
+    const t = Math.min((Date.now() - startTime) / duration, 1);
+    const eased = t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+    camera.position.x = startPos.x + (endPos.x - startPos.x) * eased;
+    camera.position.y = startPos.y + (endPos.y - startPos.y) * eased;
+    camera.position.z = startPos.z + (endPos.z - startPos.z) * eased;
+    if (t < 1) requestAnimationFrame(animateCamera);
+    else controls.autoRotate = true;
+  })();
 }
