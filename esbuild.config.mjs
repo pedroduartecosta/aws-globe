@@ -1,4 +1,5 @@
 import * as esbuild from "esbuild";
+import net from "net";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -29,14 +30,17 @@ const config = {
 };
 
 if (isDev) {
+  const port = await new Promise(resolve => {
+    const s = net.createServer();
+    s.listen(8080, () => s.close(() => resolve(8080)));
+    s.on("error", () => {
+      const s2 = net.createServer();
+      s2.listen(0, () => { const p = s2.address().port; s2.close(() => resolve(p)); });
+    });
+  });
+
   const ctx = await esbuild.context(config);
-  // Try preferred port, fall back to any free port if it's in use
-  let port;
-  try {
-    ({ port } = await ctx.serve({ servedir: "dist", port: 8080 }));
-  } catch {
-    ({ port } = await ctx.serve({ servedir: "dist", port: 0 }));
-  }
+  await ctx.serve({ servedir: "dist", port });
   await ctx.watch();
   console.log(`\nDev server: http://localhost:${port}\n`);
 } else {
