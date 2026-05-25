@@ -5,20 +5,20 @@ module.exports = {
   entry: ["./src/index.js"],
   devtool: "inline-source-map",
   devServer: {
-    contentBase: "./dist",
+    static: "./dist",
     open: false,
     hot: true,
-    writeToDisk: true,
+    devMiddleware: {
+      writeToDisk: true,
+    },
   },
-  plugins: [],
   module: {
     rules: [
       {
         test: /\.(png|jpe?g|jpg)$/i,
-        loader: "file-loader",
-        options: {
-          name: "[path][name].[ext]",
-          outputPath: "./assets",
+        type: "asset/resource",
+        generator: {
+          filename: "assets/[path][name][ext]",
         },
       },
     ],

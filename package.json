@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --config=webpack.prod.js",
+    "build": "webpack --config=webpack.prod.js",
     "build-dev": "webpack --config=webpack.dev.js",
     "start": "webpack serve webpack-dev-server --open --config=webpack.dev.js"
   },
@@ -18,19 +18,17 @@
   "author": "Zhanarbek Osmonaliev",
   "license": "ISC",
   "engines": {
-    "node": "20.x"
+    "node": ">=20"
   },
   "dependencies": {
-    "satellite.js": "^7.0.1",
+    "satellite.js": "^4.1.4",
     "three": "^0.160.1",
     "three-globe": "^2.30.0",
     "three-glow-mesh": "^0.1.2"
   },
   "devDependencies": {
-    "file-loader": "^6.2.0",
-    "json-loader": "^0.5.7",
-    "webpack": "^5.15.0",
-    "webpack-cli": "^4.3.1",
-    "webpack-dev-server": "^3.11.2"
+    "webpack": "^5.107.1",
+    "webpack-cli": "^7.0.2",
+    "webpack-dev-server": "^5.2.4"
   }
 }
