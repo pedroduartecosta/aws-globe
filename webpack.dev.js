@@ -8,9 +8,33 @@ module.exports = {
       "satellite.js$": path.resolve(__dirname, "src/satellite-browser.js"),
     },
     extensions: [".ts", ".js"],
+    // webpack-dev-server 5.x pulls server-side Node.js modules into the
+    // compilation graph. Mark every Node built-in as an empty stub so the
+    // browser bundle doesn't fail trying to polyfill them.
+    fallback: {
+      assert: false,
+      buffer: false,
+      child_process: false,
+      crypto: false,
+      events: false,
+      fs: false,
+      "fs/promises": false,
+      http: false,
+      https: false,
+      net: false,
+      os: false,
+      path: false,
+      process: false,
+      stream: false,
+      string_decoder: false,
+      tls: false,
+      url: false,
+      util: false,
+      zlib: false,
+    },
   },
   plugins: [
-    // webpack-dev-server 5.x uses node: URI imports; strip prefix so webpack can resolve them
+    // Strip node: URI prefix so the fallback map above can match the module names
     new NormalModuleReplacementPlugin(/^node:/, resource => {
       resource.request = resource.request.replace(/^node:/, "");
     }),
