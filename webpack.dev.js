@@ -1,4 +1,5 @@
 const path = require("path");
+const { NormalModuleReplacementPlugin } = require("webpack");
 
 module.exports = {
   mode: "development",
@@ -8,6 +9,12 @@ module.exports = {
     },
     extensions: [".ts", ".js"],
   },
+  plugins: [
+    // webpack-dev-server 5.x uses node: URI imports; strip prefix so webpack can resolve them
+    new NormalModuleReplacementPlugin(/^node:/, resource => {
+      resource.request = resource.request.replace(/^node:/, "");
+    }),
+  ],
   entry: ["./src/main.ts"],
   devtool: "inline-source-map",
   devServer: {
